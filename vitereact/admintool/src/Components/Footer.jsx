@@ -14,7 +14,7 @@ const Footer = () => {
   const isSmallScreen = useMediaQuery('(max-width:600px)');
 
   return (
-    <footer style={{ backgroundColor: '#ECEFF6', color: '#343A40', padding: '2rem 0', textAlign: 'center' }}>
+    <footer style={{ backgroundColor: '#ECEFF6', color: '#343A40', textAlign: 'center' }}>
         <div style={{ display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row', alignItems: 'center', justifyContent: 'center' }}>
           
             <img
@@ -41,7 +41,7 @@ const Footer = () => {
                             style={{ textDecoration: 'none', color: '#343A40', cursor: 'pointer' }}
                         >
                         <Typography variant="body2" color="#343A40" style={{ cursor: 'pointer' ,fontSize: '16px' ,}} className="hovered-text">
-                            Bengaluru
+                            Bengaluru  
                         </Typography>
                         </a>
                     </Grid>

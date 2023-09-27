@@ -1,43 +1,6 @@
 body{
   margin: 0;
   padding: 0;
-}
-
-.link{
-  display:flex;
-  color: rgb(61, 60, 60);
-  padding:10px 15px;
-  gap:15px;
-  margin-top: 10px;
-  text-decoration: none;
-}
-.link:hover{
-  /* background-color:#edecec; */
-  color: #A6B50C;
-  cursor: pointer;
-}
-
-.icon, .link_text{
-  font-size: 18px;
-}
-
-.icon{
-  flex:30%;
-  display: grid;
-  justify-content: center;
-  text-align: center;
-}
-
-.link_text{
-  flex:70%;
-  justify-content: left;
-}
-
-.link.active {
-  /* background-color: #edecec; */
-  color: #A6B50C;
-}
-
-.hovered-text:hover {
-  color: #edecec; 
+  font-family: 'Arial, sans-serif'; 
+  font-size: 18px; 
 }

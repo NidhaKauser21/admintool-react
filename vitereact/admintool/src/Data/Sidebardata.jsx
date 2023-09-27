@@ -1,4 +1,4 @@
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+// import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
@@ -7,11 +7,11 @@ import CollectionsOutlinedIcon from '@mui/icons-material/CollectionsOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 export const  Sidebardata = [
-  {
-    title:"Home",
-    icon:<HomeOutlinedIcon />,
-    link:"/"
-  },
+  // {
+  //   title:"Home",
+  //   icon:<HomeOutlinedIcon />,
+  //   link:"/"
+  // },
   {
     title:"Dashboard",
     icon:< DashboardOutlinedIcon/>,
@@ -38,8 +38,8 @@ export const  Sidebardata = [
     link:"/Asset_management"
   },
   {
-    title:"sign_out",
+    title:"Sign_out",
     icon:<LogoutOutlinedIcon />,
-    link:"/sign_out"
+    link:"/Sign_out"
   }
 ]
