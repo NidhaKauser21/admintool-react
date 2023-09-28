@@ -1,12 +1,18 @@
+import TableComponent from '../Components/Table'
+import Asserts_data from '../Data/Asserts.json'
+import React from 'react'
 
 const Asserts = () => {
+  const tableHeaders = ["Asset_user", "Asset_Name", "Asset_Id", "Purchase_date", "Warrenty", "warrenty_end", "Amount", "Status1"];
+
   return (
     <div>
-        <section>
-            <div className="Asserts_page">This is Asserts_page</div>
-        </section>
+       <TableComponent tableData={Asserts_data} tableHeaders={tableHeaders} />
     </div>
   )
 }
 
-export default Asserts
+export default Asserts;
+
+
+

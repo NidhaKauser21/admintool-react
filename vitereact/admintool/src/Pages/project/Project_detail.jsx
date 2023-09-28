@@ -1,159 +1,141 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,Avatar,Button, } from '@mui/material';
-import '../../Style/project.css';
-import renderPieChart from './Chart';
-import googleLogo from '../../assets/Google.png';
-
+import "../../Style/project.css";
+import TableComponent from "../../Components/Table";
+import data from "../../Data/Project_data.json";
+// import dashboard_data from '../../Data/Mock_data.json'
+import renderPieChart from "./Chart";
+import { useParams } from "react-router-dom";
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 
 function ProjectPage() {
+  const { id } = useParams();
+  console.log(id);
+  // console.log(data);
+  // let data1=null
+  let productDetail = data?.filter((value, index) => {
+    // console.log(value, index);
+    // console.log(typeof id);
+    // console.log(typeof value.id);
+    return (id == value.id);
+  });
 
-  const project = {
-    title: 'Google',
-    description: 'This is an example project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is an example project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is an example project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is an example project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is an example project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is an example project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is an example project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    startDate: '2023-01-01',
-    endDate: '2023-06-30',
-    team: [
-      { name: 'John Doe', email: 'john@example.com', role: 'Developer',  joinedDate: '2023-06-30', leaveDate: '2023-06-30', },
-      { name: 'Jane Smith', email: 'jane@example.com', role: 'Designer', joinedDate: '2023-06-30',leaveDate: '2023-06-30', },
-    ],
-    website: 'https://example.com',
-    contact: 'contact@example.com',
-    toolsUsed: ['React js','Node js','SQL'],
-  };
-
+  // console.log(productDetail);
+  // console.log(productDetail[0].Project_tools.Backend);
+  const tableHeaders = ["Avather", "Name", "Role", "Joined_date", "Leave_date"];
+  const tableHeaders1 = [
+    "Avather",
+    "Name",
+    "Role",
+    "Joined_date",
+    "Leave_date",
+  ];
   return (
     <div className="project-page">
-      
-      <div className="project-title">
-        <a className=" Card_link" href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-          <h1 style={{fontSize:'50px',margin:'0',marginTop:'0',}}>{project.title}</h1>
-        </a>
-      </div>
-
-      <div className="project-header">
-        <div style={{marginRight:'0px'}}>
-          <div>
-            <a className="link"  href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-              <img src={googleLogo} alt="Project Logo"  style={{width:'100px ',height:'100px'}}/>
-            </a>
-          </div>
-        </div>
-
-        <div className="project-status">
-          {renderPieChart()}
-        </div>
-      </div>
-
-      <h2>Description</h2>
-      <p style={{lineHeight:'1.7'}}>{project.description}</p>
-
-      <div style={{marginBottom:'10px'}}>
-        <h3 style={{ display: 'inline'}}>Project Start date: </h3> {project.startDate}
-      </div>
-
       <div>
-        <h3 style={{ display: 'inline' }}>project End date: </h3>{project.endDate}
-      </div>
+        {productDetail?.map((project, index) => (
+          <div key={index}>
+            <h1 style={{ fontSize: "50px", margin: "0", marginTop: "0" }}>
+              {project.Project_title}
+            </h1>
 
-      <h2>Project Tools</h2>
-      <div className="project-details1">
-        <TableContainer component={Paper} className="custom-table-container">
-          <Table className="custom-table">
-            <TableHead>
-              <TableRow >
-                <TableCell >Project Role</TableCell>
-                <TableCell >Tools Used</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell >Front end</TableCell>
-                <TableCell >React js , Angular js</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Back end </TableCell>
-                <TableCell>Node js</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell >Database</TableCell>
-                <TableCell>SQL</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
+            <div className="project-header">
+              <div style={{ marginRight: "0px" }}>
+                <div>
+                  <a
+                    className="link"
+                    href="https://www.google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={project.Image}
+                      alt="Project Image"
+                      style={{ width: "100px", height: "100px" }}
+                    />
+                  </a>
+                </div>
+              </div>
 
-      <h2>Project Lead</h2>
-      <div className="project-details">
-        <TableContainer component={Paper} className="custom-table-container">
-          <Table className="custom-table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Avatar</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell>Role</TableCell>
-                <TableCell>Joined Date</TableCell>
-                <TableCell>Leave Date</TableCell>
-                <TableCell>Action</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {project.team.map((member, index) => (
-                <TableRow key={index}>
+              <div className="project-status">
+                {renderPieChart(project.Status)}
+              </div>
+            </div>
+
+            <h2>Description</h2>
+            <p style={{ lineHeight: "1.7" }}>{project.Project_description}</p>
+
+            <div style={{ marginBottom: "10px" }}>
+              <h3 style={{ display: "inline" }}>Project Start date: </h3>{" "}
+              {project.Start_date}
+            </div>
+
+            <div>
+              <h3 style={{ display: "inline" }}>project End date: </h3>
+              {project.End_date}
+            </div>
+          </div>
+        ))}
+
+        <h2>Project Tools</h2>
+        <div className="project-details1">
+          <TableContainer component={Paper} className="custom-table-container">
+            <Table className="custom-table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Project Role</TableCell>
+                  <TableCell>Tools Used</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Front end</TableCell>
                   <TableCell>
-                    <Avatar alt={member.name} src={googleLogo} style={{ width: '50px', height: '50px' }} />
-                  </TableCell>
-                  <TableCell>{member.name}</TableCell>
-                  <TableCell>{member.role}</TableCell>
-                  <TableCell>{member.joinedDate}</TableCell>
-                  <TableCell>{member.leaveDate}</TableCell>
-                  <TableCell>
-                    <Button  variant="contained"
-                  color="primary">View</Button>
+                    {productDetail
+                      ? productDetail[0]?.Project_tools?.Frontend
+                      : ""}
                   </TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+                <TableRow>
+                  <TableCell>Back end </TableCell>
+                  <TableCell>
+                    {productDetail
+                      ? productDetail[0]?.Project_tools?.Backend
+                      : "-"}
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Database</TableCell>
+                  <TableCell>
+                    {productDetail
+                      ? productDetail[0]?.Project_tools?.Database
+                      : ""}
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
+
+        <h2>Project Lead</h2>
+        <TableComponent
+          tableData={productDetail ? productDetail : []}
+          tableHeaders={productDetail ? tableHeaders : []}
+        />
       </div>
 
       <h2>Project Team</h2>
-      <div className="project-details" style={{marginBottom:'50px',}}>
-        <TableContainer component={Paper} className="custom-table-container">
-          <Table className="custom-table">
-            <TableHead>
-              <TableRow>
-                <TableCell  >Avatar</TableCell>
-                <TableCell  >Name</TableCell>
-                <TableCell  >Role</TableCell>
-                <TableCell  >Joined Date</TableCell>
-                <TableCell  >Leave Date</TableCell>
-                <TableCell  >Action</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {project.team.map((member, index) => (
-                <TableRow key={index}>
-                  <TableCell>
-                    <Avatar alt={member.name} src={googleLogo} style={{ width: '50px', height: '50px' }} />
-                  </TableCell>
-                  <TableCell>{member.name}</TableCell>
-                  <TableCell>{member.role}</TableCell>
-                  <TableCell>{member.joinedDate}</TableCell>
-                  <TableCell>{member.leaveDate}</TableCell>
-                  <TableCell>
-                    <Button  variant="contained"
-                  color="primary">View</Button>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
-
+      <TableComponent
+        tableData={productDetail ? productDetail : []}
+        tableHeaders={productDetail ? tableHeaders1 : []}
+      />
     </div>
   );
 }
-
 export default ProjectPage;

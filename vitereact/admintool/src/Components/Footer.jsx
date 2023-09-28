@@ -1,4 +1,6 @@
+import React from 'react';
 import'../Style/Footer.css'
+import Navadhiti_logo from '../assets/Navadhiti_logo.png'
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
@@ -18,7 +20,7 @@ const Footer = () => {
         <div style={{ display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row', alignItems: 'center', justifyContent: 'center' }}>
           
             <img
-                src="/path-to-your-logo.png"
+                src={Navadhiti_logo}
                 alt="Company Logo"
                 style={{ maxWidth: '100px', maxHeight: '100px', marginBottom: isSmallScreen ? '1rem' : 0 }}
             />

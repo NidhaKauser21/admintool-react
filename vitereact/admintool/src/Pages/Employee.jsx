@@ -1,10 +1,10 @@
 
+import React from 'react'
+
 const Employee = () => {
   return (
     <div>
-        <section>
-            <div className="Employee_page">This is Employee_page</div>
-        </section>
+      hello
     </div>
   )
 }

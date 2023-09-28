@@ -1,12 +1,9 @@
-// import React from 'react';
+import React from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 
-function renderPieChart() {
-  const data = [
-    { name: 'Completed', value: 60, color: '#0088FE' },
-    { name: 'In-progress', value: 30, color: '#00C49F' },
-    { name: 'Pending', value: 10, color: '#FFBB28' },
-  ];
+function renderPieChart(Status) {
+  // console.log(Status);
+  const data = Status? Status:[]
 
   return (
     <PieChart width={300} height={200}>
