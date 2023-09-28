@@ -6,6 +6,14 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import EditIcon from "@mui/icons-material/Edit";
+import {
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "@mui/material";
+
 export default function EmployeeDetails() {
   return (
     <div>
@@ -339,6 +347,156 @@ export default function EmployeeDetails() {
 
                 <Typography sx={{ padding: "10px" }}>children : NO</Typography>
               </div>
+            </div>
+          </CardContent>
+        </Card>
+      </Box>
+
+      {/* ....Emergency Contact..... */}
+
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "row",
+          gridTemplateColumns:
+            "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
+          gap: "20px",
+        }}
+      >
+        <Card
+          elevation={9}
+          sx={{
+            width: "100%",
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            marginTop: "50px",
+          }}
+        >
+          <CardContent>
+            <EditIcon
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+                marginLeft: "auto",
+                cursor: "pointer",
+                color: "primary",
+              }}
+            />
+
+            <div style={{ padding: "15px" }}>
+              <div>
+                <Typography variant="h5">Emergency Contact</Typography>
+                <Divider inset="none" />
+              </div>
+
+              <div>
+                <Typography
+                  sx={{
+                    marginTop: "20px",
+                    padding: "10px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Primary
+                </Typography>
+
+                <Typography sx={{ padding: "10px" }}>
+                  Name : john Doe
+                </Typography>
+
+                <Typography sx={{ padding: "10px" }}>
+                  Relationship : Father
+                </Typography>
+
+                <Typography sx={{ padding: "10px" }}>
+                  Phone no : 9876543210, 9876543210
+                </Typography>
+
+                <Divider inset="none" />
+
+                <Typography sx={{ padding: "10px", fontWeight: "bold" }}>
+                  Secondary
+                </Typography>
+
+                <Typography sx={{ padding: "10px" }}>
+                  Name : Karen Wills
+                </Typography>
+
+                <Typography sx={{ padding: "10px" }}>
+                  Relationship : Brother
+                </Typography>
+
+                <Typography sx={{ padding: "10px" }}>
+                  Phone no : 9876543210, 9876543210
+                </Typography>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* ....... Family Information............ */}
+
+        <Card
+          elevation={9}
+          sx={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            marginTop: "50px",
+          }}
+        >
+          <CardContent>
+            <EditIcon
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+                marginLeft: "auto",
+                cursor: "pointer",
+                color: "primary",
+              }}
+            />
+
+            <div style={{ padding: "15px" }}>
+              <div>
+                <Typography variant="h5">Family Information</Typography>
+                <Divider inset="none" />
+              </div>
+
+              <Table sx={{ marginTop: "30px" }}>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Name</TableCell>
+                    <TableCell>Relationship</TableCell>
+                    <TableCell>Date of Birth</TableCell>
+                    <TableCell>Phone Number</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Karen Wills</TableCell>
+                    <TableCell>Brother</TableCell>
+                    <TableCell>04/06/1997</TableCell>
+                    <TableCell>9876543210</TableCell>
+                  </TableRow>
+
+                  <TableRow>
+                    <TableCell>John Wills</TableCell>
+                    <TableCell>father</TableCell>
+                    <TableCell>04/06/1997</TableCell>
+                    <TableCell>9876543210</TableCell>
+                  </TableRow>
+
+                  <TableRow>
+                    <TableCell>july Wills</TableCell>
+                    <TableCell>Mother</TableCell>
+                    <TableCell>04/06/1997</TableCell>
+                    <TableCell>9876543210</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </div>
           </CardContent>
         </Card>

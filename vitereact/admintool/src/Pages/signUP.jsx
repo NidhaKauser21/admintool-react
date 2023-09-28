@@ -1,41 +1,43 @@
-import React from 'react';
-import { Paper, Typography, TextField, Button, Container, Box, Link } from '@mui/material';
-import {  Visibility, VisibilityOff } from '@mui/icons-material';
-
+import React from "react";
+import {
+  Paper,
+  Typography,
+  TextField,
+  Button,
+  Container,
+  Box,
+  Link,
+} from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const SignupPage = () => {
-  const[showPassword,setPassword]=useState(false);
+  const [showPassword, setPassword] = useState(false);
 
-  const handlePasswordVisibilityToggle = () =>{
+  const handlePasswordVisibilityToggle = () => {
     setShowPassword(!showPassword);
-  }
+  };
   return (
-    <Container maxWidth="xs"
+    <Container
+      maxWidth="xs"
       sx={{
         marginTop: 2,
-        display: 'flex',
+        display: "flex",
         justifyContent: "center",
-        flexDirection: 'row',
-        alignItems: 'center',
-
+        flexDirection: "row",
+        alignItems: "center",
       }}
     >
-      <Paper elevation={5} sx={{ padding: 9, width: '100%' }}>
-        <Typography variant="h5" component="h2" align="center" sx={{ marginBottom: 2,color:"#A6B50C",fontSize:"40px" }}>
+      <Paper elevation={5} sx={{ padding: 9, width: "100%" }}>
+        <Typography
+          variant="h5"
+          component="h2"
+          align="center"
+          sx={{ marginBottom: 2, color: "#A6B50C", fontSize: "40px" }}
+        >
           Sign Up
         </Typography>
-        <TextField
-          label="Name"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="Email"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-        />
+        <TextField label="Name" variant="outlined" fullWidth margin="normal" />
+        <TextField label="Email" variant="outlined" fullWidth margin="normal" />
         <TextField
           label="Phone Number"
           variant="outlined"
@@ -80,7 +82,11 @@ const SignupPage = () => {
             ),
           }}
         />
-        <Button variant="contained" fullWidth sx={{ marginTop: 2, backgroundColor: "#BECE20" }}>
+        <Button
+          variant="contained"
+          fullWidth
+          sx={{ marginTop: 2, backgroundColor: "#BECE20" }}
+        >
           Sign Up
         </Button>
         <Typography variant="body2" sx={{ marginTop: 2 }}>
