@@ -1,16 +1,13 @@
-import './App.css'
-// import LoginPage from './Components/login/loginForm'
-import ProjectCard from './Components/Projects/projectCards'
+import React from 'react';
+import './App.css';
+import Mainpage from './Components/Mainpage';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
- 
-
   return (
-    <>
-  {/* <LoginPage/> */}
-  <ProjectCard/>
-  
-    </>
+    <BrowserRouter>
+      <Mainpage/>
+    </BrowserRouter>
   )
 }
 

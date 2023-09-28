@@ -17,9 +17,7 @@ const SignupPage = () => {
         justifyContent: "center",
         flexDirection: 'row',
         alignItems: 'center',
-        // minHeight: "50vh",
-        // marginLeft: "500px",
-        // marginBottom: "70px",
+
       }}
     >
       <Paper elevation={5} sx={{ padding: 9, width: '100%' }}>

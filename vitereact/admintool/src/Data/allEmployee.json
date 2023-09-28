@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "AJAY I",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/a29663c6a8f421bd07024992a03d6758/e87b8/Ajay.I.webp"
+  },
+  {
+    "id": 2,
+    "name": "AJAY KUMAR",
+    "jobtitle": "Senior Software Engineer ",
+    "avatarurl": "https://www.navadhiti.com/static/16b1cb3ce20645c98b548e6a5c749e05/73bad/ajayk.webp"
+  },
+  {
+    "id": 3,
+    "name": "ANITHA V",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/90f8859615e5468b188db4e8ef0adf28/7b52b/Anitha.webp"
+  },
+  {
+    "id": 4,
+    "name": "ARUNACHALAM E",
+    "jobtitle": "Engineering Lead",
+    "avatarurl": "https://www.navadhiti.com/static/a6617c41fa53eabf06f536bfd760a6ef/e2aa1/arun-jose.webp"
+  },
+  {
+    "id": 5,
+    "name": "BHARATHRAM S",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/bfdadb156bec1bfac995b193b4183bca/b55e7/bharathram.webp"
+  },
+  {
+    "id": 6,
+    "name": "DHANAN CHEZIYAN",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/fd265ddf478cb7b1775ad5258e65fb18/da471/Dhanan.webp"
+  },
+  {
+    "id": 7,
+    "name": "HARI PRAKASH K",
+    "jobtitle": "Engineering Lead",
+    "avatarurl": "https://www.navadhiti.com/static/1e1dd539e82d1e7f56df0d68e11d00f8/9bad4/hariprakash.webp"
+  },
+  {
+    "id": 8,
+    "name": "MD NOVFAL S",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/fb440478d4c835a30bc3ff3b99714563/b55e7/mohammed.webp"
+  },
+  {
+    "id": 9,
+    "name": "PALANI PAVAN B",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/a31444485bb5c0606c9ea8e02431db17/41243/Palani%20Pavan%20B.webp"
+  },
+  {
+    "id": 10,
+    "name": "PALANISAMY",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/c7a7908ef0d8651a2e543cbcb27056f5/b55e7/palanisamy.webp"
+  },
+  {
+    "id": 11,
+    "name": "RAGUL",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/28a59b7ff0e51d5b5fcd176c7870b20c/3065e/ragul.webp"
+  },
+  {
+    "id": 12,
+    "name": "REKHA MURTHY",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/3a4f79317595b02d31df8d016926d618/18ece/rekham.webp"
+  },
+  {
+    "id": 13,
+    "name": "ROSHINI RAJU",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/5d7e925ccb6ea7ad30bbb06f031bd405/b55e7/roshini.webp"
+  },
+  {
+    "id": 14,
+    "name": "SATHEESH KUMAR",
+    "jobtitle": "QA Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/7cec892365b4a0e3f697678ea7fb298e/b55e7/Satheesh.webp"
+  },
+  {
+    "id": 15,
+    "name": "SIVADHARSHAN M",
+    "jobtitle": "Executive-Administration",
+    "avatarurl": "https://www.navadhiti.com/static/f3298ed35e4fd305d9bed662c475210c/96736/Sivadharshan.webp"
+  },
+  {
+    "id": 15,
+    "name": "SOWMIYA R",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/a015205aa21bda5ad2dc467b707697d6/9e5bb/sowmya.R.webp"
+  },
+  {
+    "id": 15,
+    "name": "VANITHA S",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/c002d46d0e863aa1ddf8bbacb4bba3e7/a5830/vanitha.webp"
+  },
+  {
+    "id": 15,
+    "name": "VIJAY BASKARAN A T",
+    "jobtitle": "Software Engineer",
+    "avatarurl": "https://www.navadhiti.com/static/0bbca801da66ab7736fb3973d81ee33c/7d446/vijay%20bas.webp"
+  }
+]
