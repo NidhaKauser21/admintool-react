@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "Image": "https://i.pinimg.com/564x/44/d8/63/44d86313e8dd6fc190e713de60bf629e.jpg",
+    "Project_title": "Atomz",
+    "Project_description": "Limb lengthening procedures, other bones",
+    "Start_date": "1/25/2023",
+    "End_date": "5/23/2022",
+    "Avather": "https://robohash.org/inventoresuntconsequatur.png?size=50x50&set=set1",
+    "Name": "Ashley",
+    "Role": "Health Coach I",
+    "Joined_date": "8/13/2003",
+    "Leave_date": "9/24/2035",
+    "Project_role": "Help Desk Technician",
+    "Tool_used": "Euro",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 2,
+    "Image": "https://i.pinimg.com/564x/4d/2a/84/4d2a845c9f09d8068cb377722e4120ca.jpg",
+    "Project_title": "Binbag",
+    "Project_description": "Teleradiotherapy using electrons",
+    "Start_date": "5/28/2023",
+    "End_date": "3/16/2023",
+    "Avather": "https://robohash.org/molestiaevoluptatibuset.png?size=50x50&set=set1",
+    "Name": "Lynnea",
+    "Role": "Junior Executive",
+    "Joined_date": "5/11/2002",
+    "Leave_date": "11/1/2025",
+    "Project_role": "Paralegal",
+    "Tool_used": "Boliviano",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 3,
+    "Image": "https://i.pinimg.com/564x/ed/ba/49/edba49ff9d8a2ef1c218fd9bd09541b1.jpg",
+    "Project_title": "Educate Girls",
+    "Project_description": "Other heat therapy",
+    "Start_date": "7/13/2023",
+    "End_date": "8/19/2022",
+    "Avather": "https://robohash.org/etinsunt.png?size=50x50&set=set1",
+    "Name": "Dorris",
+    "Role": "Web Designer II",
+    "Joined_date": "9/22/2002",
+    "Leave_date": "11/4/2025",
+    "Project_role": "Information Systems Manager",
+    "Tool_used": "Euro",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 4,
+    "Image": "https://i.pinimg.com/564x/7d/8c/ac/7d8cacdf8a9ac39ccd33ac7f7252a64c.jpg",
+    "Project_title": "Pumas",
+    "Project_description": "Extraction of deciduous tooth",
+    "Start_date": "6/9/2022",
+    "End_date": "6/17/2022",
+    "Avather": "https://robohash.org/idcumnon.png?size=50x50&set=set1",
+    "Name": "Maudie",
+    "Role": "Senior Editor",
+    "Joined_date": "2/11/2002",
+    "Leave_date": "12/2/2026",
+    "Project_role": "Senior Cost Accountant",
+    "Tool_used": "Zloty",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 5,
+    "Image": "https://i.pinimg.com/564x/84/80/b9/8480b9ae96a37d0b8a7aa259a7d87fb9.jpg",
+    "Project_title": "Lahi",
+    "Project_description": "Other lobectomy of lung",
+    "Start_date": "1/20/2023",
+    "End_date": "5/18/2023",
+    "Avather": "https://robohash.org/idexeaque.png?size=50x50&set=set1",
+    "Name": "Clarette",
+    "Role": "Research Assistant III",
+    "Joined_date": "5/9/2003",
+    "Leave_date": "6/13/2034",
+    "Project_role": "Account Executive",
+    "Tool_used": "Real",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 100, "color": "#0088FE" },
+      { "name": "In-progress", "value": 0, "color": "#00C49F" },
+      { "name": "Pending", "value": 0, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 6,
+    "Image": "https://i.pinimg.com/564x/85/70/b9/8570b95a653e41e7d310288ed6d54db3.jpg",
+    "Project_title": "Vayah vikas",
+    "Project_description": "Computer assisted surgery with multiple datasets",
+    "Start_date": "12/8/2022",
+    "End_date": "9/14/2023",
+    "Avather": "https://robohash.org/voluptatibuscorporismolestias.png?size=50x50&set=set1",
+    "Name": "Genevra",
+    "Role": "Research Nurse",
+    "Joined_date": "5/20/2002",
+    "Leave_date": "9/17/2032",
+    "Project_role": "Structural Engineer",
+    "Tool_used": "Peso",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 7,
+    "Image": "https://robohash.org/dictaipsavel.png?size=50x50&set=set1",
+    "Project_title": "Tromsø Airport",
+    "Project_description": "Drainage of pancreatic cyst by catheter",
+    "Start_date": "12/12/2022",
+    "End_date": "6/23/2022",
+    "Avather": "https://robohash.org/quiaperiamet.png?size=50x50&set=set1",
+    "Name": "Bethina",
+    "Role": "Budget/Accounting Analyst II",
+    "Joined_date": "7/20/2002",
+    "Leave_date": "5/9/2037",
+    "Project_role": "Geological Engineer",
+    "Tool_used": "Yuan Renminbi",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 8,
+    "Image": "https://robohash.org/deseruntesselibero.png?size=50x50&set=set1",
+    "Project_title": "Cape Girardeau Regional Airport",
+    "Project_description": "Cardiac mapping",
+    "Start_date": "3/16/2023",
+    "End_date": "4/13/2022",
+    "Avather": "https://robohash.org/istevoluptatemoptio.png?size=50x50&set=set1",
+    "Name": "Tamma",
+    "Role": "Quality Engineer",
+    "Joined_date": "6/6/2003",
+    "Leave_date": "5/1/2029",
+    "Project_role": "Office Assistant I",
+    "Tool_used": "Peso",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 9,
+    "Image": "https://robohash.org/placeatomniseum.png?size=50x50&set=set1",
+    "Project_title": "Sioux Lookout Airport",
+    "Project_description": "Removal of intrauterine contraceptive device",
+    "Start_date": "9/2/2021",
+    "End_date": "10/30/2022",
+    "Avather": "https://robohash.org/ipsaadipisciquis.png?size=50x50&set=set1",
+    "Name": "Wendeline",
+    "Role": "Nurse",
+    "Joined_date": "8/14/2002",
+    "Leave_date": "1/4/2028",
+    "Project_role": "Human Resources Manager",
+    "Tool_used": "Dinar",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  },
+  {
+    "id": 10,
+    "Image": "https://robohash.org/reprehenderitsapienteminima.png?size=50x50&set=set1",
+    "Project_title": "Ovda International Airport",
+    "Project_description": "Vaccination against mumps",
+    "Start_date": "3/8/2023",
+    "End_date": "11/27/2022",
+    "Avather": "https://robohash.org/quiaquasplaceat.png?size=50x50&set=set1",
+    "Name": "Analiese",
+    "Role": "Chemical Engineer",
+    "Joined_date": "6/30/2003",
+    "Leave_date": "3/5/2028",
+    "Project_role": "Community Outreach Specialist",
+    "Tool_used": "Yen",
+    "Project_tools": {
+      "Frontend": "Reactjs",
+      "Backend": "Nodejs",
+      "Database": "SQL"
+    },
+    "Status": [
+      { "name": "Completed", "value": 30, "color": "#0088FE" },
+      { "name": "In-progress", "value": 30, "color": "#00C49F" },
+      { "name": "Pending", "value": 40, "color": "#FFBB28" }
+    ]
+  }
+]

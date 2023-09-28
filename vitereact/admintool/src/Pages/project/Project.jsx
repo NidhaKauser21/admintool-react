@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import projectCard from '../../Data/projectCard.json';
+import projectCard from '../../Data/Project_data.json';
 import { Link } from "react-router-dom";
 
 
@@ -63,7 +63,7 @@ export default function ProjectCard() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button component={Link} to={`/product_detail/${data.id}`}
+          <Button component={Link} to={`/project_detail/${data.id}`}
             size="small"
             sx={{
               backgroundColor: "",
@@ -80,8 +80,6 @@ export default function ProjectCard() {
     </div>
     
 </div>
-
-
 
 );
 }

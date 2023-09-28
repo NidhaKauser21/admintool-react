@@ -5,7 +5,6 @@ import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlin
 import CollectionsOutlinedIcon from '@mui/icons-material/CollectionsOutlined';
 
 export const  Sidebardata = [
-
   {
     title:"Dashboard",
     icon:< DashboardOutlinedIcon/>,
@@ -30,6 +29,5 @@ export const  Sidebardata = [
     title:"Assets",
     icon:<CollectionsOutlinedIcon />,
     link:"/Assets"
-  },
-
+  }
 ]

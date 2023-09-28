@@ -15,7 +15,7 @@ const Sidebar = () => {
                 to={item.link}
                 key={index} 
                 className='link'
-                activeClassName='active'
+                activeclassname='active'
                 >
                   <div className='icon'>{item.icon}</div>
                   <div className='link_text'>{item.title}</div>
@@ -25,7 +25,7 @@ const Sidebar = () => {
           }
         </div>
     </section>     
-    </div>
+  </div>
   )
 }
 

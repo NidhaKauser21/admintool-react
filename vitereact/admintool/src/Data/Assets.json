@@ -1,0 +1,112 @@
+[
+  {
+    "Asset_user": "Karia Ness",
+    "Asset_Name": "Miller-Stiedemann",
+    "Asset_Id": "4100126263",
+    "Purchase_date": "13-Jul-2023",
+    "Warrenty": "2023-09",
+    "warrenty_end": "02-Feb-2023",
+    "Amount":" 64",
+    "Status1": "1"
+  },
+  {
+    "Asset_user": "Raymund July",
+    "Asset_Name": "Bednar-Crooks",
+    "Asset_Id": "4836733243",
+    "Purchase_date": "03-May-2023",
+    "Warrenty": "2023-06",
+    "warrenty_end": "29-Oct-2022",
+    "Amount": 26,
+    "Status1": "2"
+  },
+  {
+    "Asset_user": "Ruthie Belfelt",
+    "Asset_Name": "Konopelski LLC",
+    "Asset_Id": "4708043228",
+    "Purchase_date": "30-Aug-2023",
+    "Warrenty": "2022-12",
+    "warrenty_end": "26-Feb-2023",
+    "Amount": 3,
+    "Status1": "1"
+  },
+  {
+    "Asset_user": "Bealle Stang-Gjertsen",
+    "Asset_Name": "Olson, Leannon and Glover",
+    "Asset_Id": "7666161050",
+    "Purchase_date": "12-Sep-2023",
+    "Warrenty": "2023-02",
+    "warrenty_end": "12-Mar-2023",
+    "Amount": 88,
+    "Status1": "2"
+  },
+  {
+    "Asset_user": "Leah Robjohns",
+    "Asset_Name": "Glover LLC",
+    "Asset_Id": "1271597187",
+    "Purchase_date": "15-Jun-2023",
+    "Warrenty": "2023-06",
+    "warrenty_end": "20-Mar-2023",
+    "Amount": 93,
+    "Status1": "3"
+  },
+  {
+    "Asset_user": "Webster Cooksey",
+    "Asset_Name": "Maggio-Jones",
+    "Asset_Id": "9220374668",
+    "Purchase_date": "10-Sep-2023",
+    "Warrenty": "2023-03",
+    "warrenty_end": "08-Apr-2023",
+    "Amount": 7,
+    "Status1": "2"
+  },
+  {
+    "Asset_user": "Isa Quinane",
+    "Asset_Name": "Barton and Sons",
+    "Asset_Id": "9588035988",
+    "Purchase_date": "31-Jul-2023",
+    "Warrenty": "2023-09",
+    "warrenty_end": "29-Sep-2022",
+    "Amount": 3,
+    "Status1": "1"
+  },
+  {
+    "Asset_user": "Winna Hayter",
+    "Asset_Name": "Purdy-Herzog",
+    "Asset_Id": "5287997272",
+    "Purchase_date": "21-Sep-2023",
+    "Warrenty": "2023-09",
+    "warrenty_end": "12-Jan-2023",
+    "Amount": 5,
+    "Status1": "2"
+  },
+  {
+    "Asset_user": "Konstantine Eckery",
+    "Asset_Name": "Christiansen, Daniel and Howe",
+    "Asset_Id": "0079456693",
+    "Purchase_date": "31-Aug-2023",
+    "Warrenty": "2023-08",
+    "warrenty_end": "14-Apr-2023",
+    "Amount": 30,
+    "Status1": "3"
+  },
+  {
+    "Asset_user": "Janie Adran",
+    "Asset_Name": "Dickens and Sons",
+    "Asset_Id": "0995819459",
+    "Purchase_date": "12-Jul-2023",
+    "Warrenty": "2023-01",
+    "warrenty_end": "25-Dec-2022",
+    "Amount": 10,
+    "Status1": "2"
+  },
+  {
+    "Asset_user": "Jourdain Kiley",
+    "Asset_Name": "Gusikowski, O'Reilly and Kuhlman",
+    "Asset_Id": "1300265507",
+    "Purchase_date": "24-Aug-2023",
+    "Warrenty": "2023-01",
+    "warrenty_end": "31-Oct-2022",
+    "Amount": 5,
+    "Status1": "1"
+  }
+]

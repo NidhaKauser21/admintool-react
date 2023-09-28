@@ -1,0 +1,14 @@
+.custom-table-container {
+    border: 1px solid #ccc; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .custom-table th {
+    font-weight: bold;
+    font-size: 18px; 
+    font-family: 'Arial, sans-serif'; 
+  }
+  
+  .custom-table td {
+    font-size: 18px; 
+    font-family: 'Arial, sans-serif'; 
+  }

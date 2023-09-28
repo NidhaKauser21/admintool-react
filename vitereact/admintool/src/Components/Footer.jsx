@@ -1,4 +1,6 @@
+import React from 'react';
 import'../Style/Footer.css'
+import Navadhiti_logo from '../assets/Navadhiti_logo.png'
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
@@ -14,11 +16,11 @@ const Footer = () => {
   const isSmallScreen = useMediaQuery('(max-width:600px)');
 
   return (
-    <footer style={{ backgroundColor: '#ECEFF6', color: '#343A40', padding: '2rem 0', textAlign: 'center' }}>
+    <footer style={{ backgroundColor: '#ECEFF6', color: '#343A40', textAlign: 'center' }}>
         <div style={{ display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row', alignItems: 'center', justifyContent: 'center' }}>
           
             <img
-                src="/path-to-your-logo.png"
+                src={Navadhiti_logo}
                 alt="Company Logo"
                 style={{ maxWidth: '100px', maxHeight: '100px', marginBottom: isSmallScreen ? '1rem' : 0 }}
             />
@@ -41,7 +43,7 @@ const Footer = () => {
                             style={{ textDecoration: 'none', color: '#343A40', cursor: 'pointer' }}
                         >
                         <Typography variant="body2" color="#343A40" style={{ cursor: 'pointer' ,fontSize: '16px' ,}} className="hovered-text">
-                            Bengaluru
+                            Bengaluru  
                         </Typography>
                         </a>
                     </Grid>
