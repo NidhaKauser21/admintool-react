@@ -1,6 +1,6 @@
 import {Routes,Route, Navigate} from "react-router-dom";
 import Accounting from '../Pages/Accounting';
-import Asserts from '../Pages/Asserts';
+import Assets from '../Pages/Assets';
 import Dashboard from '../Pages/Dashboard';
 import Employee from '../Pages/Employee';
 import Project from '../Pages/project/Project';
@@ -12,7 +12,7 @@ const Navpage = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/Dashboard" />}/>
         <Route path="/Accounting" element={<Accounting/>}/>
-        <Route path="/Asset_management" element={<Asserts/>}/>
+        <Route path="/Asset_management" element={<Assets/>}/>
         <Route path="/Dashboard" element={<Dashboard/>}/>
         <Route path="/Employee" element={<Employee/>}/>
         <Route path="/project" element={<Project/>}/>

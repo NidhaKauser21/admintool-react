@@ -1,5 +1,5 @@
 import TableComponent from '../Components/Table'
-import Asserts_data from '../Data/Asserts.json'
+import Asserts_data from '../Data/Assets.json'
 import React from 'react'
 
 const Asserts = () => {
