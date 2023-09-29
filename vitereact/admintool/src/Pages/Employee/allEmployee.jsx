@@ -99,7 +99,9 @@ export default function EmployeeCard() {
                   boxShadow: "none",
                 }}
               >
-                <MenuItem onClick={handleClose}>Edit</MenuItem>
+                <MenuItem onClick={handleClose} component={Link}
+                to={`/EditEmployee/`}
+                src={data.avatarurl}>Edit</MenuItem>
                 <MenuItem onClick={handleClose}>Delete</MenuItem>
               </Menu>
 

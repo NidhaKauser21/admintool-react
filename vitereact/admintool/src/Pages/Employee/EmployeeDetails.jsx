@@ -13,6 +13,7 @@ import {
   TableCell,
   TableBody,
 } from "@mui/material";
+import "../../Style/EmployeeDetails.css";
 
 export default function EmployeeDetails() {
   return (
@@ -80,24 +81,48 @@ export default function EmployeeDetails() {
             <CardContent
               sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
             >
+              <EditIcon
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginLeft: "auto",
+                  cursor: "pointer",
+                  color: "primary",
+                }}
+              />
+
               <div>
-                <Typography fontWeight="bold">Phone : 987654321</Typography>
-                <br />
-
-                <Typography fontWeight="bold">
-                  Email : ajay@gmail.com
+                <Typography sx={{ fontWeight: "bold", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Phone:</span> 987654321
                 </Typography>
                 <br />
 
-                <Typography fontWeight="bold">Birthday : 24th july</Typography>
-                <br />
-
-                <Typography fontWeight="bold">
-                  Adress : Veerapandi pirivu karamadai,Mettupaplayam
+                <Typography sx={{ fontWeight: "bold", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Email:</span>{" "}
+                  ajay@navadhiti.com
                 </Typography>
                 <br />
 
-                <Typography fontWeight="bold">Gender : Male</Typography>
+                <Typography sx={{ fontWeight: "bold", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Secondary Email:</span>{" "}
+                  ajay1@gmail.com
+                </Typography>
+                <br />
+
+                <Typography sx={{ fontWeight: "bold", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Birthday:</span> 24th July
+                </Typography>
+                <br />
+
+                <Typography sx={{ fontWeight: "bold", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Address:</span> Veerapandi
+                  Pirivu Karamadai, Mettupalayam
+                </Typography>
+                <br />
+
+                <Typography sx={{ fontWeight: "bold", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Gender:</span> Male
+                </Typography>
               </div>
             </CardContent>
           </Card>
@@ -107,9 +132,9 @@ export default function EmployeeDetails() {
       {/* ....Bank Informations..... */}
 
       <Box
+        className="box1"
         sx={{
           width: "100%",
-          display: "flex",
           flexDirection: "row",
           gridTemplateColumns:
             "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
@@ -137,27 +162,31 @@ export default function EmployeeDetails() {
               }}
             />
 
-            <div style={{ padding: "15px" }}>
+            <div>
               <div>
                 <Typography variant="h5">Bank Information</Typography>
                 <Divider inset="none" />
               </div>
 
               <div>
-                <Typography sx={{ marginTop: "20px", padding: "10px" }}>
-                  Bank Name : ICICI Bank
+                <Typography
+                  sx={{ marginTop: "20px", display: "flex", padding: "15px" }}
+                >
+                  <span style={{ minWidth: "150px" }}>Bank Name:</span> ICICI
+                  Bank
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Bank Account No : 1598345678
+                <Typography sx={{ display: "flex", padding: "15px" }}>
+                  <span style={{ minWidth: "150px" }}>Bank Account No:</span>{" "}
+                  1598345678
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  IFSC Code : ICI4567
+                <Typography sx={{ display: "flex", padding: "15px" }}>
+                  <span style={{ minWidth: "150px" }}>IFSC Code:</span> ICI4567
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  PAN No : TC000011
+                <Typography sx={{ display: "flex", padding: "15px" }}>
+                  <span style={{ minWidth: "150px" }}>PAN No:</span> TC000011
                 </Typography>
               </div>
             </div>
@@ -187,7 +216,7 @@ export default function EmployeeDetails() {
               }}
             />
 
-            <div style={{ padding: "15px" }}>
+            <div>
               <div>
                 <Typography variant="h5">Experience</Typography>
                 <Divider inset="none" />
@@ -226,9 +255,10 @@ export default function EmployeeDetails() {
       {/* ....Educational Information..... */}
 
       <Box
+        className="box2"
         sx={{
           width: "100%",
-          display: "flex",
+          // display: "flex",
           flexDirection: "row",
           gridTemplateColumns:
             "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
@@ -256,7 +286,7 @@ export default function EmployeeDetails() {
               }}
             />
 
-            <div style={{ padding: "15px" }}>
+            <div>
               <div>
                 <Typography variant="h5">Educational Information</Typography>
                 <Divider inset="none" />
@@ -318,34 +348,43 @@ export default function EmployeeDetails() {
               }}
             />
 
-            <div style={{ padding: "15px" }}>
+            <div>
               <div>
                 <Typography variant="h5">Personal Information</Typography>
                 <Divider inset="none" />
               </div>
 
               <div>
-                <Typography sx={{ padding: "10px", marginTop: "20px" }}>
-                  Aadhar No : 123456789
+                <Typography
+                  sx={{ padding: "10px", marginTop: "20px", display: "flex" }}
+                >
+                  <span style={{ minWidth: "150px" }}>Aadhar No:</span>{" "}
+                  123456789
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Tel no : 9876543210
+                <Typography sx={{ padding: "10px", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Tel No:</span> 9876543210
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Nationality : Indian
+                <Typography sx={{ padding: "10px", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Nationality:</span> Indian
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Marital Status : Single
+                <Typography sx={{ padding: "10px", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Marital Status:</span>{" "}
+                  Single
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Employement of Spouse : No
+                <Typography sx={{ padding: "10px", display: "flex" }}>
+                  <span style={{ minWidth: "190px" }}>
+                    Employment of Spouse:
+                  </span>{" "}
+                  No
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>children : NO</Typography>
+                <Typography sx={{ padding: "10px", display: "flex" }}>
+                  <span style={{ minWidth: "150px" }}>Children:</span> No
+                </Typography>
               </div>
             </div>
           </CardContent>
@@ -355,12 +394,10 @@ export default function EmployeeDetails() {
       {/* ....Emergency Contact..... */}
 
       <Box
+        className="box3"
         sx={{
           width: "100%",
-          display: "flex",
           flexDirection: "row",
-          gridTemplateColumns:
-            "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
           gap: "20px",
         }}
       >
@@ -368,7 +405,7 @@ export default function EmployeeDetails() {
           elevation={9}
           sx={{
             width: "100%",
-            flex: 1,
+            flex: "1 ",
             display: "flex",
             flexDirection: "column",
             marginTop: "50px",
@@ -385,7 +422,7 @@ export default function EmployeeDetails() {
               }}
             />
 
-            <div style={{ padding: "15px" }}>
+            <div>
               <div>
                 <Typography variant="h5">Emergency Contact</Typography>
                 <Divider inset="none" />
@@ -402,17 +439,21 @@ export default function EmployeeDetails() {
                   Primary
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Name : john Doe
-                </Typography>
+                <div>
+                  <Typography sx={{ padding: "10px", display: "flex" }}>
+                    <span style={{ minWidth: "150px" }}>Name:</span> John Doe
+                  </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Relationship : Father
-                </Typography>
+                  <Typography sx={{ padding: "10px", display: "flex" }}>
+                    <span style={{ minWidth: "150px" }}>Relationship:</span>{" "}
+                    Father
+                  </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Phone no : 9876543210, 9876543210
-                </Typography>
+                  <Typography sx={{ padding: "10px", display: "flex" }}>
+                    <span style={{ minWidth: "150px" }}>Phone No:</span>{" "}
+                    9876543210, 9876543210
+                  </Typography>
+                </div>
 
                 <Divider inset="none" />
 
@@ -420,17 +461,21 @@ export default function EmployeeDetails() {
                   Secondary
                 </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Name : Karen Wills
-                </Typography>
+                <div>
+                  <Typography sx={{ padding: "10px", display: "flex" }}>
+                    <span style={{ minWidth: "150px" }}>Name:</span> Karen wills
+                  </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Relationship : Brother
-                </Typography>
+                  <Typography sx={{ padding: "10px", display: "flex" }}>
+                    <span style={{ minWidth: "150px" }}>Relationship:</span>{" "}
+                    Brother
+                  </Typography>
 
-                <Typography sx={{ padding: "10px" }}>
-                  Phone no : 9876543210, 9876543210
-                </Typography>
+                  <Typography sx={{ padding: "10px", display: "flex" }}>
+                    <span style={{ minWidth: "150px" }}>Phone No:</span>{" "}
+                    9876543210, 9876543210
+                  </Typography>
+                </div>
               </div>
             </div>
           </CardContent>
@@ -441,7 +486,7 @@ export default function EmployeeDetails() {
         <Card
           elevation={9}
           sx={{
-            flex: 1,
+            flex: "1",
             display: "flex",
             flexDirection: "column",
             width: "100%",
@@ -459,7 +504,7 @@ export default function EmployeeDetails() {
               }}
             />
 
-            <div style={{ padding: "15px" }}>
+            <div>
               <div>
                 <Typography variant="h5">Family Information</Typography>
                 <Divider inset="none" />
