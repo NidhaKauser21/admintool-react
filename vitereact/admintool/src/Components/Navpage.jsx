@@ -19,7 +19,6 @@ const Navpage = () => {
         <Route path="/EmployeeDetails/:id" element={<EmployeeDetails/>}/>
         <Route path="/project" element={<Project/>}/>
         <Route path="/project_detail/:id"element={<Project_detail />} />
-
       </Routes>
     </div>
   );

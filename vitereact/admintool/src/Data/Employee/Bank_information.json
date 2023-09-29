@@ -1,0 +1,9 @@
+[
+    {
+        "id":"1",
+        "bank_name":"statebank",
+        "acc_no":"76543234",
+        "IFSC code":"SBI234",
+        "PAN no":"SDF4567"
+    }
+]

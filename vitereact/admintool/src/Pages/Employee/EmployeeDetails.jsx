@@ -6,105 +6,130 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import EditIcon from "@mui/icons-material/Edit";
+import { useParams } from "react-router-dom";
+import allEmployee from "../../Data/Employee/allEmployee.json";
+
 export default function EmployeeDetails() {
+  const { id } = useParams();
+  console.log(id);
+
+  let Emp_Detail = allEmployee?.filter((value, index) => {
+    // console.log(value, index);
+    // console.log(typeof id);
+    // console.log(typeof value.id);
+    return id == value.id;
+  });
+  console.log(Emp_Detail);
+  let employee = Emp_Detail[0];
+
   return (
     <div>
       <div>
-        <Typography variant="h4">Profile</Typography>
+        <Typography variant="h4" style={{ fontWeight: "600" }}>
+          Profile
+        </Typography>
+        <div style={{ display: "flex", paddingTop: "10px" }}>
+          <Typography variant="h5">Dashboard /</Typography>
+          <Typography variant="h6"> profile</Typography>
+        </div>
       </div>
 
       {/* .......Profile Card...... */}
-
-      <div>
-        <Box
+      <Box
+        sx={{
+          width: "100%",
+          position: "relative",
+          marginTop: { sx: "none", md: "40px" },
+          overflow: { xs: "auto", sm: "initial" },
+          display: "flex",
+        }}
+      >
+        <Card
+          elevation={5}
           sx={{
             width: "100%",
-            position: "relative",
-            marginTop: "60px",
-            overflow: { xs: "auto", sm: "initial" },
+            flexWrap: "wrap",
+            [`& > *`]: {
+              "--stack-point": "500px",
+              minWidth:
+                "clamp(0px, (calc(var(--stack-point) - 2 * var(--Card-padding) - 2 * var(--variant-borderWidth, 0px)) + 1px - 100%) * 999, 100%)",
+            },
             display: "flex",
           }}
         >
-          <Card
-            elevation={5}
-            sx={{
-              width: "100%",
-              flexWrap: "wrap",
-              [`& > *`]: {
-                "--stack-point": "500px",
-                minWidth:
-                  "clamp(0px, (calc(var(--stack-point) - 2 * var(--Card-padding) - 2 * var(--variant-borderWidth, 0px)) + 1px - 100%) * 999, 100%)",
-              },
-              display: "flex",
-            }}
+          <Box sx={{ display: "felx", alignItems: "center", p: 3 }}>
+            <Avatar
+              alt="User Avatar"
+              src={employee.avatarurl}
+              sx={{ width: 130, height: 130, marginTop: "7px" }}
+            />
+          </Box>
+
+          <CardContent>
+            <div>
+              <Typography
+                variant="h5"
+                fontWeight="bold"
+                sx={{ marginTop: "10px" }}
+              >
+                {employee.name}
+              </Typography>
+
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                fontWeight="bold"
+              >
+                {employee.jobtitle}
+              </Typography>
+              <br />
+
+              <Typography fontWeight="bold">
+                Employee ID : {employee.Emp_id}
+              </Typography>
+            </div>
+          </CardContent>
+
+          <CardContent
+            sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
           >
-            <Box sx={{ display: "felx", alignItems: "center", p: 3 }}>
-              <Avatar
-                alt="User Avatar"
-                src="https://www.navadhiti.com/static/a29663c6a8f421bd07024992a03d6758/e87b8/Ajay.I.webp"
-                sx={{ width: 130, height: 130, marginTop: "7px" }}
-              />
-            </Box>
+            <div>
+              <Typography fontWeight="bold">
+                Phone : {employee.phone}
+              </Typography>
+              <br />
 
-            <CardContent>
-              <div>
-                <Typography
-                  variant="h5"
-                  fontWeight="bold"
-                  sx={{ marginTop: "10px" }}
-                >
-                  AJAY I
-                </Typography>
+              <Typography fontWeight="bold">
+                Email : {employee.Email}
+              </Typography>
+              <br />
 
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  fontWeight="bold"
-                >
-                  Software Engineer
-                </Typography>
-                <br />
+              <Typography fontWeight="bold">
+                Birthday : {employee.Dob}
+              </Typography>
+              <br />
 
-                <Typography fontWeight="bold">Employee ID : ND-0001</Typography>
-              </div>
-            </CardContent>
+              <Typography fontWeight="bold">
+                Adress :{employee.Address}
+              </Typography>
+              <br />
 
-            <CardContent
-              sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
-            >
-              <div>
-                <Typography fontWeight="bold">Phone : 987654321</Typography>
-                <br />
-
-                <Typography fontWeight="bold">
-                  Email : ajay@gmail.com
-                </Typography>
-                <br />
-
-                <Typography fontWeight="bold">Birthday : 24th july</Typography>
-                <br />
-
-                <Typography fontWeight="bold">
-                  Adress : Veerapandi pirivu karamadai,Mettupaplayam
-                </Typography>
-                <br />
-
-                <Typography fontWeight="bold">Gender : Male</Typography>
-              </div>
-            </CardContent>
-          </Card>
-        </Box>
-      </div>
-
+              <Typography fontWeight="bold">
+                Gender :{employee.Gender}
+              </Typography>
+            </div>
+          </CardContent>
+        </Card>
+      </Box>
       {/* ....Bank Informations..... */}
-
       <Box
         sx={{
           width: "100%",
           display: "flex",
+          // flexWrap: "wrap",
           flexDirection: "row",
-          gridTemplateColumns:
-            "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
+          // justifyContent: "space-between",
+          // gridTemplateColumns:"repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
           gap: "20px",
         }}
       >
@@ -155,9 +180,7 @@ export default function EmployeeDetails() {
             </div>
           </CardContent>
         </Card>
-
         {/* ....... Expirence............ */}
-
         <Card
           elevation={9}
           sx={{
@@ -214,9 +237,7 @@ export default function EmployeeDetails() {
           </CardContent>
         </Card>
       </Box>
-
       {/* ....Educational Information..... */}
-
       <Box
         sx={{
           width: "100%",

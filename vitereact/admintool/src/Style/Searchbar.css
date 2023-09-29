@@ -1,7 +1,9 @@
 .searchbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 35px;
   }
 .search-button{
   width:25ch;

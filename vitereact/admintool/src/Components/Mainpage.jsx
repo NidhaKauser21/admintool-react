@@ -11,9 +11,9 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600, // Customize this breakpoint value as needed
+      sm: 960,
       md: 960,
-      lg: 1280,
+      lg: 1280, // Customize this breakpoint value as needed
       xl: 1920,
     },
   },
@@ -35,7 +35,7 @@ function Mainpage() {
           <Grid container>
             {/* Conditionally render the Sidebar based on screen size */}
             {isSmallScreen ? null : (
-              <Grid item xs={12} md={2} sx={{ backgroundColor: '#FFF1FF', minHeight: '100vh' }}>
+              <Grid item xs={12} md={2} sx={{ backgroundColor: '#FFF1FF'}}>
                 <Sidebar />
               </Grid>
             )}
