@@ -68,6 +68,7 @@ export default function EmployeeCard() {
         }}
       >
         {allEmployee.map((data) => (
+         
           <Card
             key={data.id}
             sx={{
@@ -121,9 +122,11 @@ export default function EmployeeCard() {
                 sx={{ width: 100, height: 100 }}
               />
 
+
               <Typography variant="h5" sx={{ mt: 2 }}>
                 {data.name}
               </Typography>
+
 
               <Typography
                 variant="body1"
@@ -136,5 +139,6 @@ export default function EmployeeCard() {
         ))}
       </div>
     </div>
+             
   );
 }

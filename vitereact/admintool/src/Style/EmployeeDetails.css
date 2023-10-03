@@ -1,0 +1,28 @@
+.box1 {
+  display: flex;
+}
+
+.box2 {
+  display: flex;
+}
+
+.box3 {
+  display: flex;
+}
+
+@media (max-width: 850px) {
+  .box1 {
+    display: block;
+    width: 100%;
+  }
+
+  .box2 {
+    display: block;
+    width: 100%;
+  }
+
+  .box3 {
+    display: block;
+    width: 100%;
+  }
+}

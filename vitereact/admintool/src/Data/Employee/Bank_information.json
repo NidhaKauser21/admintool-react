@@ -5,5 +5,19 @@
         "acc_no":"76543234",
         "IFSC code":"SBI234",
         "PAN no":"SDF4567"
+    },
+    {
+        "id":"2",
+        "bank_name":"statebank",
+        "acc_no":"76543234",
+        "IFSC code":"SBI234",
+        "PAN no":"SDF4567"
+    },
+    {
+        "id":"3",
+        "bank_name":"statebank",
+        "acc_no":"76543234",
+        "IFSC code":"SBI234",
+        "PAN no":"SDF4567"
     }
 ]

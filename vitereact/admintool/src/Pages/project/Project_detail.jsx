@@ -1,6 +1,6 @@
 import "../../Style/project.css";
 import TableComponent from "../../Components/Table";
-import data from "../../Data/Project_data.json";
+import data from "../../Data/projectCard.json";
 // import dashboard_data from '../../Data/Mock_data.json'
 import renderPieChart from "./Chart";
 import { useParams } from "react-router-dom";

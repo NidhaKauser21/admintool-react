@@ -9,20 +9,34 @@
     "Email":"ajay@navadhiti.com",
     "sec_email":"ajay@gmail.com",
     "Dob":"27-08-2000",
-    "Address":"Flat G3, Nanda Apartments, No. 21/7a, Habibullah Road,Opp: Nadigar sangam, T.Nagar, Chennai, Tamil Nadu 600017, India",
+    "Address":"Flat G3, Nanda Apartments T.Nagar, Chennai, Tamil Nadu 600017, India",
     "Gender":"male"
   },
   {
     "id": 2,
     "name": "AJAY KUMAR",
     "jobtitle": "Senior Software Engineer ",
-    "avatarurl": "https://www.navadhiti.com/static/16b1cb3ce20645c98b548e6a5c749e05/73bad/ajayk.webp"
+    "avatarurl": "https://www.navadhiti.com/static/16b1cb3ce20645c98b548e6a5c749e05/73bad/ajayk.webp",
+    "Emp_id":"NV2001",
+    "phone":"6374215819",
+    "Email":"ajay@navadhiti.com",
+    "sec_email":"ajay@gmail.com",
+    "Dob":"27-08-2000",
+    "Address":"Flat G3, Nanda Apartments T.Nagar, Chennai, Tamil Nadu 600017, India",
+    "Gender":"male"
   },
   {
     "id": 3,
     "name": "ANITHA V",
     "jobtitle": "Software Engineer",
-    "avatarurl": "https://www.navadhiti.com/static/90f8859615e5468b188db4e8ef0adf28/7b52b/Anitha.webp"
+    "avatarurl": "https://www.navadhiti.com/static/90f8859615e5468b188db4e8ef0adf28/7b52b/Anitha.webp",
+    "Emp_id":"NV2001",
+    "phone":"6374215819",
+    "Email":"ajay@navadhiti.com",
+    "sec_email":"ajay@gmail.com",
+    "Dob":"27-08-2000",
+    "Address":"Flat G3, Nanda Apartments T.Nagar, Chennai, Tamil Nadu 600017, India",
+    "Gender":"male"
   },
   {
     "id": 4,

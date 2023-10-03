@@ -1,5 +1,74 @@
 [
     {
+        "id":"1",
+        "Aadhar_no":"4325 7584 8536 9265",
+        "Tel no":"2345 6789",
+        "Nationality":"Indian",
+        "marital status":"single",
+        "children":"No",
+        "Emp_of_Spouse":"No",
+        "collage":{
+            "pg":
+            {
+                "pg_name":"RV College of Arts and Science. (PG)",
+                "pg_degree":"Msc Computer Science",
+                "pg_batch":"2014-2016"
+            },
+            "ug":
+            {
+                "ug_name":"RV College of Arts and Science. (UG)",
+                "ug_degree":"Bsc Computer Science",
+                "ug_batch":"2011-2013"
+            }
+           
+        },
+        "school":{
+            "SSLC":{
+                "SSLC_name":"SRSI Matric Higher Secondary school.(SSLC)",
+                "SSLC_batch":"2010-2011"
+            },
+            "HSC":{
+                "HSC_name":"SRSI Matric Higher Secondary school.(HSC)",
+                "HSC_batch":"2008-2009"
+            }
+        }
+    },
+    {
+        "id":"2",
+        "Aadhar_no":"4325 7584 8536 9265",
+        "Tel no":"2345 6789",
+        "Nationality":"Indian",
+        "marital status":"single",
+        "children":"No",
+        "Emp_of_Spouse":"No",
+        "collage":{
+            "pg":
+            {
+                "pg_name":"RV College of Arts and Science. (PG)",
+                "pg_degree":"Msc Computer Science",
+                "pg_batch":"2014-2016"
+            },
+            "ug":
+            {
+                "ug_name":"RV College of Arts and Science. (UG)",
+                "ug_degree":"Bsc Computer Science",
+                "ug_batch":"2011-2013"
+            }
+           
+        },
+        "school":{
+            "SSLC":{
+                "SSLC_name":"SRSI Matric Higher Secondary school.(SSLC)",
+                "SSLC_batch":"2010-2011"
+            },
+            "HSC":{
+                "HSC_name":"SRSI Matric Higher Secondary school.(HSC)",
+                "HSC_batch":"2008-2009"
+            }
+        }
+    },
+    {
+        "id":"3",
         "Aadhar_no":"4325 7584 8536 9265",
         "Tel no":"2345 6789",
         "Nationality":"Indian",
@@ -32,5 +101,4 @@
             }
         }
     }
-
 ]
