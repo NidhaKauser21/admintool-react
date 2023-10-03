@@ -188,6 +188,7 @@ export default function EmployeeDetails() {
                 <Typography sx={{ display: "flex", padding: "15px" }}>
                   <span style={{ minWidth: "150px" }}>PAN No:</span> TC000011
                 </Typography>
+
               </div>
             </div>
           </CardContent>
@@ -258,7 +259,6 @@ export default function EmployeeDetails() {
         className="box2"
         sx={{
           width: "100%",
-          // display: "flex",
           flexDirection: "row",
           gridTemplateColumns:
             "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",

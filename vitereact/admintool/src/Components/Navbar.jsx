@@ -22,6 +22,7 @@ import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import "../Style/Navbar.css";
 import Sidebar from "./Sidebar";
 import Navadhiti_logo from '../assets/Navadhiti_logo.png'
+import { Link } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -185,7 +186,8 @@ export default function PrimarySearchAppBar() {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="inherit"
+          color="inherit" 
+          component={Link} to={`/loginForm/`}
         >
           <LogoutOutlinedIcon />
         </IconButton>
