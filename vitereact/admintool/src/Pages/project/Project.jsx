@@ -55,8 +55,7 @@ export default function ProjectCard() {
         <CardActionArea>
           <CardMedia
             component="img"
-            height="200px"
-            
+            height="200px"  
             image={data.Image}
             alt={data.Project_title}
           />
