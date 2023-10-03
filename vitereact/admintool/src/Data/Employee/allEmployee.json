@@ -3,19 +3,40 @@
     "id": 1,
     "name": "AJAY I",
     "jobtitle": "Software Engineer",
-    "avatarurl": "https://www.navadhiti.com/static/a29663c6a8f421bd07024992a03d6758/e87b8/Ajay.I.webp"
+    "avatarurl": "https://www.navadhiti.com/static/a29663c6a8f421bd07024992a03d6758/e87b8/Ajay.I.webp",
+    "Emp_id":"NV2001",
+    "phone":"6374215819",
+    "Email":"ajay@navadhiti.com",
+    "sec_email":"ajay@gmail.com",
+    "Dob":"27-08-2000",
+    "Address":"Flat G3, Nanda Apartments T.Nagar, Chennai, Tamil Nadu 600017, India",
+    "Gender":"male"
   },
   {
     "id": 2,
     "name": "AJAY KUMAR",
     "jobtitle": "Senior Software Engineer ",
-    "avatarurl": "https://www.navadhiti.com/static/16b1cb3ce20645c98b548e6a5c749e05/73bad/ajayk.webp"
+    "avatarurl": "https://www.navadhiti.com/static/16b1cb3ce20645c98b548e6a5c749e05/73bad/ajayk.webp",
+    "Emp_id":"NV2001",
+    "phone":"6374215819",
+    "Email":"ajay@navadhiti.com",
+    "sec_email":"ajay@gmail.com",
+    "Dob":"27-08-2000",
+    "Address":"Flat G3, Nanda Apartments T.Nagar, Chennai, Tamil Nadu 600017, India",
+    "Gender":"male"
   },
   {
     "id": 3,
     "name": "ANITHA V",
     "jobtitle": "Software Engineer",
-    "avatarurl": "https://www.navadhiti.com/static/90f8859615e5468b188db4e8ef0adf28/7b52b/Anitha.webp"
+    "avatarurl": "https://www.navadhiti.com/static/90f8859615e5468b188db4e8ef0adf28/7b52b/Anitha.webp",
+    "Emp_id":"NV2001",
+    "phone":"6374215819",
+    "Email":"ajay@navadhiti.com",
+    "sec_email":"ajay@gmail.com",
+    "Dob":"27-08-2000",
+    "Address":"Flat G3, Nanda Apartments T.Nagar, Chennai, Tamil Nadu 600017, India",
+    "Gender":"male"
   },
   {
     "id": 4,
@@ -90,19 +111,19 @@
     "avatarurl": "https://www.navadhiti.com/static/f3298ed35e4fd305d9bed662c475210c/96736/Sivadharshan.webp"
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "SOWMIYA R",
     "jobtitle": "Software Engineer",
     "avatarurl": "https://www.navadhiti.com/static/a015205aa21bda5ad2dc467b707697d6/9e5bb/sowmya.R.webp"
   },
   {
-    "id": 15,
+    "id": 17,
     "name": "VANITHA S",
     "jobtitle": "Software Engineer",
     "avatarurl": "https://www.navadhiti.com/static/c002d46d0e863aa1ddf8bbacb4bba3e7/a5830/vanitha.webp"
   },
   {
-    "id": 15,
+    "id": 18,
     "name": "VIJAY BASKARAN A T",
     "jobtitle": "Software Engineer",
     "avatarurl": "https://www.navadhiti.com/static/0bbca801da66ab7736fb3973d81ee33c/7d446/vijay%20bas.webp"

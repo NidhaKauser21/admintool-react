@@ -18,7 +18,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Drawer from "@mui/material/Drawer";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-// import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import "../Style/Navbar.css";
 import Sidebar from "./Sidebar";
 import Navadhiti_logo from '../assets/Navadhiti_logo.png'
@@ -73,7 +73,7 @@ export default function PrimarySearchAppBar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isSmallScreen = useMediaQuery("(max-width:960px)");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -198,7 +198,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{backgroundColor:'#F7F7F7'}}>
+      <AppBar position="static" sx={{ backgroundColor: "#F7F7F7" }}>
         <Toolbar>
           {isSmallScreen && (
             <IconButton
@@ -206,23 +206,24 @@ export default function PrimarySearchAppBar() {
               edge="start"
               // color="#FFFFFF"
               aria-label="open drawer"
-              sx={{ mr: 2 ,color:'#646368'}}
+              sx={{ mr: 2, color: "#646368" }}
               onClick={toggleDrawer}
             >
               <MenuIcon />
             </IconButton>
           )}
-          <img
-            src={Navadhiti_logo} // Replace with the URL of your image
-            alt="Navadhiti"
-            style={{
-              // maxWidth: "400px",
-              maxHeight: "80px",
-              display: "block", // Display property
-              marginLeft: "50px",
-            }}
-          />
-
+          <a
+            className="link"
+            href="https://www.navadhiti.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Navadhiti_logo}
+              alt="Navadhiti"
+              className="Navadhiti_logo"
+            />
+          </a>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Search
@@ -231,24 +232,24 @@ export default function PrimarySearchAppBar() {
                 borderRadius: "20px",
                 height: "40px",
                 marginTop: "3px",
-                // color:'#646368',
-                border:'#646368'
+                color: "#646368",
+                backgroundColor: "#FEFCFE",
               }}
             >
-              <SearchIconWrapper style={{color:'#646368',border:'#646368' }}>
-                <SearchIcon style={{color:'#646368',border:'#646368' }} />
+              <SearchIconWrapper>
+                <SearchIcon style={{ color: "#646368" }} />
               </SearchIconWrapper>
               <StyledInputBase
                 placeholder="Search…"
                 inputProps={{ "aria-label": "search" }}
-                style={{color:'#646368',border:'#646368' }}
+                style={{ color: "#BECE20" }}
               />
             </Search>
             <IconButton
               size="small"
               aria-label="show 17 new notifications"
               color="inherit"
-              style={{ marginRight: "20px",color:'#646368' }}
+              style={{ marginRight: "20px", color: "#646368" }}
             >
               <Badge
                 badgeContent={10}
@@ -262,7 +263,7 @@ export default function PrimarySearchAppBar() {
               >
                 <NotificationsIcon
                   fontSize="medium"
-                  style={{ margin: "3px", }}
+                  style={{ margin: "3px" }}
                 />
               </Badge>
             </IconButton>
@@ -273,7 +274,7 @@ export default function PrimarySearchAppBar() {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
-              style={{ marginRight: "10px",color:'#646368' }}
+              style={{ marginRight: "10px", color: "#646368" }}
             >
               <AccountCircle fontSize="large" />
             </IconButton>
@@ -296,13 +297,12 @@ export default function PrimarySearchAppBar() {
       {renderMenu}
       {isSmallScreen && (
         <Drawer open={isDrawerOpen} onClose={toggleDrawer}>
-          <div style={{ backgroundColor: "#1976D2", width: "250px" }}>
+          <div style={{ backgroundColor: "#F7F7F7", width: "250px" }}>
             <IconButton
               variant="contained"
               onClick={toggleDrawer}
-              style={{ height: "55px", marginRight: "auto",color:'#646368' }}
+              style={{ height: "65px", marginRight: "auto", color: "#646368" }}
               size="large"
-              
             >
               <MenuIcon />
             </IconButton>

@@ -6,30 +6,65 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import EditIcon from "@mui/icons-material/Edit";
-import {
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-} from "@mui/material";
+import { useParams } from "react-router-dom";
+import allEmployee from "../../Data/Employee/allEmployee.json";
+import Bankinformation from "../../Data/Employee/Bank_information.json";
+import Emergency from "../../Data/Employee/Contact.json";
+import Educational from "../../Data/Employee/Personal.json"
+import {Table,TableHead,TableRow,TableCell,TableBody,} from "@mui/material";
 import "../../Style/EmployeeDetails.css";
 
 export default function EmployeeDetails() {
+
+  const { id } = useParams();
+  console.log(id);
+
+  let Emp_Detail = allEmployee?.filter((value, index) => {
+    return id == value.id;
+  });
+
+  let Bankinfo = Bankinformation?.filter((value, index) => {
+    return id == value.id;
+  });
+
+  let Contactinfo = Emergency?.filter((value, index) => {
+    return id == value.id;
+  });
+
+  let Educationalinfo = Educational?.filter((value, index) => {
+    return id == value.id;
+  });
+
+  // console.log(Bankinfo);
+  // console.log(Emp_Detail);
+  // console.log(Contactinfo);
+  console.log(Educationalinfo);
+
+  let employee = Emp_Detail[0];
+  let bank = Bankinfo[0];
+  let Emg_info = Contactinfo[0];
+  let Personal_info = Educationalinfo[0];
+
   return (
     <div>
-      <div>
-        <Typography variant="h4">Profile</Typography>
-      </div>
 
-      {/* .......Profile Card...... */}
+        <div>
+          <Typography variant="h4" style={{ fontWeight: "600" }}>
+            Profile
+          </Typography>
+          <div style={{ display: "flex", paddingTop: "10px" }}>
+            <Typography variant="h5">Dashboard /</Typography>
+            <Typography variant="h6"> profile</Typography>
+          </div>
+        </div>
 
       <div>
+        {/* .......Profile Card...... */}
         <Box
           sx={{
             width: "100%",
             position: "relative",
-            marginTop: "60px",
+            marginTop: { sx: "none", md: "40px" },
             overflow: { xs: "auto", sm: "initial" },
             display: "flex",
           }}
@@ -50,7 +85,7 @@ export default function EmployeeDetails() {
             <Box sx={{ display: "felx", alignItems: "center", p: 3 }}>
               <Avatar
                 alt="User Avatar"
-                src="https://www.navadhiti.com/static/a29663c6a8f421bd07024992a03d6758/e87b8/Ajay.I.webp"
+                src={employee.avatarurl}
                 sx={{ width: 130, height: 130, marginTop: "7px" }}
               />
             </Box>
@@ -62,7 +97,7 @@ export default function EmployeeDetails() {
                   fontWeight="bold"
                   sx={{ marginTop: "10px" }}
                 >
-                  AJAY I
+                  {employee.name}
                 </Typography>
 
                 <Typography
@@ -70,11 +105,13 @@ export default function EmployeeDetails() {
                   color="text.secondary"
                   fontWeight="bold"
                 >
-                  Software Engineer
+                  {employee.jobtitle}
                 </Typography>
                 <br />
 
-                <Typography fontWeight="bold">Employee ID : ND-0001</Typography>
+                <Typography fontWeight="bold">
+                  Employee ID : {employee.Emp_id}
+                </Typography>
               </div>
             </CardContent>
 
@@ -93,35 +130,32 @@ export default function EmployeeDetails() {
 
               <div>
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Phone:</span> 987654321
+                  <span style={{ minWidth: "150px" }}>Phone:</span> {employee.phone}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Email:</span>{" "}
-                  ajay@navadhiti.com
+                  <span style={{ minWidth: "150px" }}>Email:</span>{employee.Email}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Secondary Email:</span>{" "}
-                  ajay1@gmail.com
+                  <span style={{ minWidth: "150px" }}>Secondary Email:</span>{employee.sec_email}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Birthday:</span> 24th July
+                  <span style={{ minWidth: "150px" }}>Birthday:</span>{employee.Dob}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Address:</span> Veerapandi
-                  Pirivu Karamadai, Mettupalayam
+                  <span style={{ minWidth: "150px" }}>Address:</span> {employee.Address}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Gender:</span> Male
+                  <span style={{ minWidth: "150px" }}>Gender :</span> {employee.Gender}
                 </Typography>
               </div>
             </CardContent>
@@ -136,8 +170,8 @@ export default function EmployeeDetails() {
         sx={{
           width: "100%",
           flexDirection: "row",
-          gridTemplateColumns:
-            "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
+          // justifyContent: "space-between",
+          // gridTemplateColumns:"repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
           gap: "20px",
         }}
       >
@@ -172,30 +206,27 @@ export default function EmployeeDetails() {
                 <Typography
                   sx={{ marginTop: "20px", display: "flex", padding: "15px" }}
                 >
-                  <span style={{ minWidth: "150px" }}>Bank Name:</span> ICICI
-                  Bank
+                  <span style={{ minWidth: "150px" }}>Bank Name:</span> {bank.bank_name}
                 </Typography>
 
                 <Typography sx={{ display: "flex", padding: "15px" }}>
                   <span style={{ minWidth: "150px" }}>Bank Account No:</span>{" "}
-                  1598345678
+                 {bank.acc_no}
                 </Typography>
 
                 <Typography sx={{ display: "flex", padding: "15px" }}>
-                  <span style={{ minWidth: "150px" }}>IFSC Code:</span> ICI4567
+                  <span style={{ minWidth: "150px" }}>IFSC Code:</span> {bank["IFSC code"]}
                 </Typography>
 
                 <Typography sx={{ display: "flex", padding: "15px" }}>
-                  <span style={{ minWidth: "150px" }}>PAN No:</span> TC000011
+                  <span style={{ minWidth: "150px" }}>PAN No:</span> {bank["PAN no"]}
                 </Typography>
 
               </div>
             </div>
           </CardContent>
         </Card>
-
         {/* ....... Expirence............ */}
-
         <Card
           elevation={9}
           sx={{
@@ -254,7 +285,6 @@ export default function EmployeeDetails() {
       </Box>
 
       {/* ....Educational Information..... */}
-
       <Box
         className="box2"
         sx={{
@@ -294,31 +324,31 @@ export default function EmployeeDetails() {
 
               <div>
                 <Typography sx={{ marginTop: "20px", padding: "10px" }}>
-                  RV College of Arts and Science. (PG)
+                  {Personal_info.collage.pg.pg_name}
                   <br />
-                  Msc Computer Science
+                  {Personal_info.collage.pg.pg_degree}
                   <br />
-                  2014-2016
+                  {Personal_info.collage.pg.pg_batch}
                 </Typography>
 
                 <Typography sx={{ padding: "10px" }}>
-                  RV College of Arts and Science. (UG)
+                {Personal_info.collage.ug.ug_name}
                   <br />
-                  Bsc Computer Science
+                  {Personal_info.collage.ug.ug_degree}
                   <br />
-                  2011-2014
+                  {Personal_info.collage.ug.ug_batch}
                 </Typography>
 
                 <Typography sx={{ padding: "10px" }}>
-                  SRSI Matric Higher Secondary School. (HSC)
+                {Personal_info.school.HSC.HSC_name}
                   <br />
-                  2009-2011
+                  {Personal_info.school.HSC.HSC_batch}
                 </Typography>
 
                 <Typography sx={{ padding: "10px" }}>
-                  SRSI Matric Higher Secondary School. (SSLC)
+                {Personal_info.school.SSLC.SSLC_name}
                   <br />
-                  2008-2009
+                  {Personal_info.school.SSLC.SSLC_batch}
                 </Typography>
               </div>
             </div>
@@ -359,31 +389,31 @@ export default function EmployeeDetails() {
                   sx={{ padding: "10px", marginTop: "20px", display: "flex" }}
                 >
                   <span style={{ minWidth: "150px" }}>Aadhar No:</span>{" "}
-                  123456789
+                  {Personal_info.Aadhar_no}
                 </Typography>
 
                 <Typography sx={{ padding: "10px", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Tel No:</span> 9876543210
+                  <span style={{ minWidth: "150px" }}>Tel No:</span> {Personal_info["Tel no"]}
                 </Typography>
 
                 <Typography sx={{ padding: "10px", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Nationality:</span> Indian
+                  <span style={{ minWidth: "150px" }}>Nationality:</span> {Personal_info.Nationality}
                 </Typography>
 
                 <Typography sx={{ padding: "10px", display: "flex" }}>
                   <span style={{ minWidth: "150px" }}>Marital Status:</span>{" "}
-                  Single
+                  {Personal_info["marital status"]}
                 </Typography>
 
                 <Typography sx={{ padding: "10px", display: "flex" }}>
                   <span style={{ minWidth: "190px" }}>
                     Employment of Spouse:
                   </span>{" "}
-                  No
+                  {Personal_info.Emp_of_Spouse}
                 </Typography>
 
                 <Typography sx={{ padding: "10px", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Children:</span> No
+                  <span style={{ minWidth: "150px" }}>Children:</span> {Personal_info.children}
                 </Typography>
               </div>
             </div>
@@ -441,17 +471,17 @@ export default function EmployeeDetails() {
 
                 <div>
                   <Typography sx={{ padding: "10px", display: "flex" }}>
-                    <span style={{ minWidth: "150px" }}>Name:</span> John Doe
+                    <span style={{ minWidth: "150px" }}>Name:</span> {Emg_info.contact.primary.name}
                   </Typography>
 
                   <Typography sx={{ padding: "10px", display: "flex" }}>
                     <span style={{ minWidth: "150px" }}>Relationship:</span>{" "}
-                    Father
+                    {Emg_info.contact.primary.Relationship}
                   </Typography>
 
                   <Typography sx={{ padding: "10px", display: "flex" }}>
                     <span style={{ minWidth: "150px" }}>Phone No:</span>{" "}
-                    9876543210, 9876543210
+                    {Emg_info.contact.primary.ph1},{Emg_info.contact.primary.ph2}
                   </Typography>
                 </div>
 
@@ -463,17 +493,17 @@ export default function EmployeeDetails() {
 
                 <div>
                   <Typography sx={{ padding: "10px", display: "flex" }}>
-                    <span style={{ minWidth: "150px" }}>Name:</span> Karen wills
+                    <span style={{ minWidth: "150px" }}>Name:</span> {Emg_info.contact.secondary.name}
                   </Typography>
 
                   <Typography sx={{ padding: "10px", display: "flex" }}>
                     <span style={{ minWidth: "150px" }}>Relationship:</span>{" "}
-                    Brother
+                    {Emg_info.contact.secondary.Relationship}
                   </Typography>
 
                   <Typography sx={{ padding: "10px", display: "flex" }}>
                     <span style={{ minWidth: "150px" }}>Phone No:</span>{" "}
-                    9876543210, 9876543210
+                    {Emg_info.contact.secondary.ph1}, {Emg_info.contact.secondary.ph2}
                   </Typography>
                 </div>
               </div>
@@ -521,24 +551,24 @@ export default function EmployeeDetails() {
                 </TableHead>
                 <TableBody>
                   <TableRow>
-                    <TableCell>Karen Wills</TableCell>
-                    <TableCell>Brother</TableCell>
-                    <TableCell>04/06/1997</TableCell>
-                    <TableCell>9876543210</TableCell>
+                    <TableCell>{Emg_info.information[0].name}</TableCell>
+                    <TableCell>{Emg_info.information[0].relationship}</TableCell>
+                    <TableCell>{Emg_info.information[0].Dob}</TableCell>
+                    <TableCell>{Emg_info.information[0].phone}</TableCell>
                   </TableRow>
 
                   <TableRow>
-                    <TableCell>John Wills</TableCell>
-                    <TableCell>father</TableCell>
-                    <TableCell>04/06/1997</TableCell>
-                    <TableCell>9876543210</TableCell>
+                    <TableCell>{Emg_info.information[1].name}</TableCell>
+                    <TableCell>{Emg_info.information[1].relationship}</TableCell>
+                    <TableCell>{Emg_info.information[1].Dob}</TableCell>
+                    <TableCell>{Emg_info.information[1].phone}</TableCell>
                   </TableRow>
 
                   <TableRow>
-                    <TableCell>july Wills</TableCell>
-                    <TableCell>Mother</TableCell>
-                    <TableCell>04/06/1997</TableCell>
-                    <TableCell>9876543210</TableCell>
+                    <TableCell>{Emg_info.information[2].name}</TableCell>
+                    <TableCell>{Emg_info.information[2].relationship}</TableCell>
+                    <TableCell>{Emg_info.information[2].Dob}</TableCell>
+                    <TableCell>{Emg_info.information[2].phone}</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

@@ -1,10 +1,11 @@
 import "../../Style/project.css";
 import TableComponent from "../../Components/Table";
-import data from "../../Data/Project_data.json";
+import data from "../../Data/projectCard.json";
 // import dashboard_data from '../../Data/Mock_data.json'
 import renderPieChart from "./Chart";
 import { useParams } from "react-router-dom";
 import {
+  Button,
   Paper,
   Table,
   TableBody,
@@ -12,18 +13,19 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 
 function ProjectPage() {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   // console.log(data);
   // let data1=null
   let productDetail = data?.filter((value, index) => {
     // console.log(value, index);
     // console.log(typeof id);
     // console.log(typeof value.id);
-    return (id == value.id);
+    return id == value.id;
   });
 
   // console.log(productDetail);
@@ -38,12 +40,49 @@ function ProjectPage() {
   ];
   return (
     <div className="project-page">
-      <div>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <div>
+          <Typography variant="h4" style={{ fontWeight: "600" }}>
+            Project_detail
+          </Typography>
+          <div style={{ display: "flex", paddingTop: "10px" }}>
+            <Typography variant="h5">Dashboard /</Typography>
+            <Typography variant="h6"> Project_detail</Typography>
+          </div>
+        </div>
+
+        <Button
+          // size="small"
+          sx={{
+            width: { xs: "100px", md: "170px" },
+            height: "50px",
+            backgroundColor: "#BECE20",
+            color: "white",
+            marginLeft: "auto",
+            paddingRight: { xs: "none", md: "25px" },
+            fontWeight: { xs: "none", md: "bold" },
+            "&:hover": {
+              backgroundColor: "#BECE34",
+              textAlign: "center",
+            },
+          }}
+        >
+          + EDIT DETAIL
+        </Button>
+      </div>
+      <div style={{ marginTop: "50px" }}>
         {productDetail?.map((project, index) => (
           <div key={index}>
-            <h1 style={{ fontSize: "50px", margin: "0", marginTop: "0" }}>
-              {project.Project_title}
-            </h1>
+            <a
+              className="link"
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h1 style={{ fontSize: "50px", margin: "0", marginTop: "0" }}>
+                {project.Project_title}
+              </h1>
+            </a>
 
             <div className="project-header">
               <div style={{ marginRight: "0px" }}>
@@ -57,7 +96,11 @@ function ProjectPage() {
                     <img
                       src={project.Image}
                       alt="Project Image"
-                      style={{ width: "100px", height: "100px" }}
+                      style={{
+                        width: "300px",
+                        height: "200px",
+                        borderRadius: "20px",
+                      }}
                     />
                   </a>
                 </div>
@@ -122,14 +165,13 @@ function ProjectPage() {
             </Table>
           </TableContainer>
         </div>
-
-        <h2>Project Lead</h2>
-        <TableComponent
-          tableData={productDetail ? productDetail : []}
-          tableHeaders={productDetail ? tableHeaders : []}
-        />
       </div>
 
+      <h2>Project Lead</h2>
+      <TableComponent
+        tableData={productDetail ? productDetail : []}
+        tableHeaders={productDetail ? tableHeaders : []}
+      />
       <h2>Project Team</h2>
       <TableComponent
         tableData={productDetail ? productDetail : []}

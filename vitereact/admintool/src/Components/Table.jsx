@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Style/Table.css";
+import MoreIcon from "@mui/icons-material/MoreVert";
+import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+
 import {
   Table,
   TableBody,
@@ -12,6 +16,8 @@ import {
   FormControl,
   MenuItem,
   Select,
+  IconButton,
+  Menu,
 } from "@mui/material";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import { styled } from "@mui/material/styles";
@@ -20,11 +26,11 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.white,
     color: theme.palette.common.black,
-    textAlign: 'center', 
+    textAlign: "center",
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 18,
-    textAlign: 'center',
+    textAlign: "center",
   },
 }));
 
@@ -40,6 +46,15 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const TableComponent = (props) => {
   const { tableData, tableHeaders } = props;
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <TableContainer component={Paper} className="custom-table-container">
@@ -47,7 +62,7 @@ const TableComponent = (props) => {
         <TableHead>
           <TableRow>
             {tableHeaders.map((header, index) => (
-               <StyledTableCell key={index}>{header}</StyledTableCell>
+              <StyledTableCell key={index}>{header}</StyledTableCell>
             ))}
             <StyledTableCell>Action</StyledTableCell>
           </TableRow>
@@ -94,9 +109,28 @@ const TableComponent = (props) => {
                 );
               })}
               <StyledTableCell>
-                <Button variant="contained" color="primary">
-                  View
-                </Button>
+                <IconButton
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                  onClick={handleClick}
+                >
+                  <MoreIcon />
+                </IconButton>
+                <Menu
+                  id="simple-menu"
+                  anchorEl={anchorEl}
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  <MenuItem>
+                    <ModeEditOutlineOutlinedIcon />
+                    Edit
+                  </MenuItem>
+                  <MenuItem>
+                    <DeleteOutlineOutlinedIcon />
+                    Delete
+                  </MenuItem>
+                </Menu>
               </StyledTableCell>
             </StyledTableRow>
           ))}

@@ -9,7 +9,8 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import allEmployee from "../../Data/allEmployee.json";
+import allEmployee from "../../Data/Employee/allEmployee.json";
+import Searchbar from "../../Components/Searchbar";
 
 export default function EmployeeCard() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -24,31 +25,41 @@ export default function EmployeeCard() {
 
   return (
     <div>
-      <div
-        style={{ display: "flex", fontWeight: "bold", paddingRight: "25px" }}
-      >
-        <Typography variant="h4">Employee</Typography>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <div>
+          <Typography variant="h4" style={{ fontWeight: "600" }}>
+            Employee
+          </Typography>
+          <div style={{ display: "flex", paddingTop: "10px" }}>
+            <Typography variant="h5">Dashboard /</Typography>
+            <Typography variant="h6"> employee</Typography>
+          </div>
+        </div>
 
         <Button
-          size="small"
+          // size="small"
           sx={{
+            width: { xs: "100px", md: "170px" },
+            height: "50px",
             backgroundColor: "#BECE20",
             color: "white",
             marginLeft: "auto",
-            fontWeight: "bold",
+            paddingRight: { xs: "none", md: "25px" },
+            fontWeight: { xs: "none", md: "bold" },
             "&:hover": {
-              backgroundColor: "#BECE20",
+              backgroundColor: "#BECE34",
+              textAlign: "center",
             },
           }}
         >
-          + Add Employee
+          + NEW EMPLOYEE
         </Button>
       </div>
-
+      <Searchbar />
       <div
         className="EmployeeCard"
         style={{
-          marginTop: "20px",
+          // marginTop: "20px",
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
@@ -57,6 +68,7 @@ export default function EmployeeCard() {
         }}
       >
         {allEmployee.map((data) => (
+         
           <Card
             key={data.id}
             sx={{
@@ -99,9 +111,7 @@ export default function EmployeeCard() {
                   boxShadow: "none",
                 }}
               >
-                <MenuItem onClick={handleClose} component={Link}
-                to={`/EditEmployee/`}
-                src={data.avatarurl}>Edit</MenuItem>
+                <MenuItem onClick={handleClose}>Edit</MenuItem>
                 <MenuItem onClick={handleClose}>Delete</MenuItem>
               </Menu>
 
@@ -112,9 +122,11 @@ export default function EmployeeCard() {
                 sx={{ width: 100, height: 100 }}
               />
 
+
               <Typography variant="h5" sx={{ mt: 2 }}>
                 {data.name}
               </Typography>
+
 
               <Typography
                 variant="body1"
@@ -127,5 +139,6 @@ export default function EmployeeCard() {
         ))}
       </div>
     </div>
+             
   );
 }

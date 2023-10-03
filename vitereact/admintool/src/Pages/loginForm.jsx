@@ -112,11 +112,13 @@ const LoginPage = () => {
             <Link href="#">Forgot Password?</Link>
           </Typography>
           <Typography variant="body2" sx={{ marginTop: 2 }}>
-            Don't have an account? <Link href="#">Sign Up</Link>
+            Don t have an account? <Link href="#">Sign Up</Link>
           </Typography>
         </Paper>
-      </Container>
-    );
+   
+    </Container>
+    
+  );
   }
   return EmailTextField();
 };
