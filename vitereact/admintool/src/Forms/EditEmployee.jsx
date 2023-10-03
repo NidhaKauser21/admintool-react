@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
-import { TextField } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -15,7 +15,7 @@ export default function BasicEmployeeDetails() {
   const [department, setDepartment] = useState("");
 
   const handleChange = (event) => {
-    setDepartmen(event.target.value);
+    setDepartment(event.target.value);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function BasicEmployeeDetails() {
       <Box
         sx={{
           width: "100%",
-          display: flex,
+          display:"flex",
         }}
       >
         <Card
