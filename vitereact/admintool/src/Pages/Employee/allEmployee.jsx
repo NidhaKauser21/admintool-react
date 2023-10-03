@@ -11,8 +11,16 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import allEmployee from "../../Data/Employee/allEmployee.json";
 import Searchbar from "../../Components/Searchbar";
+import { useNavigate } from 'react-router-dom';
 
 export default function EmployeeCard() {
+
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+
+  const handleEditClick = () => {
+    navigate('/EditEmployee'); // Use navigate to navigate to the desired route
+  };
+
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -111,7 +119,7 @@ export default function EmployeeCard() {
                   boxShadow: "none",
                 }}
               >
-                <MenuItem onClick={handleClose}>Edit</MenuItem>
+                <MenuItem onClick={handleEditClick}>Edit</MenuItem>
                 <MenuItem onClick={handleClose}>Delete</MenuItem>
               </Menu>
 

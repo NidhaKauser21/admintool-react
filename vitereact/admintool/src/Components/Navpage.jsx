@@ -6,6 +6,7 @@ import Project from '../Pages/project/Project';
 import Project_detail from '../Pages/project/Project_detail';
 import Employee from '../Pages/Employee/allEmployee';
 import EmployeeDetails from "../Pages/Employee/EmployeeDetails";
+import EditEmployee from "../Forms/EditEmployee";
 
 const Navpage = () => {
   return (
@@ -19,6 +20,8 @@ const Navpage = () => {
         <Route path="/EmployeeDetails/:id" element={<EmployeeDetails/>}/>
         <Route path="/project" element={<Project/>}/>
         <Route path="/project_detail/:id"element={<Project_detail />} />
+        <Route path="/EditEmployee"element={<EditEmployee/>} />
+
       </Routes>
     </div>
   );
