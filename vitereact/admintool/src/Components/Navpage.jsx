@@ -7,12 +7,14 @@ import Project_detail from '../Pages/project/Project_detail';
 import Employee from '../Pages/Employee/allEmployee';
 import EmployeeDetails from "../Pages/Employee/EmployeeDetails";
 import EditEmployee from "../Forms/EditEmployee";
+import Loginpage from '../Pages/loginForm';
+import Signup_page from '../Pages/signUP';
 
 const Navpage = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Navigate to="/Dashboard" />}/>
+        <Route path="/" element={<Navigate to="/Loginpage" />}/>
         <Route path="/Accounting" element={<Accounting/>}/>
         <Route path="/Assets" element={<Assets/>}/>
         <Route path="/Dashboard" element={<Dashboard/>}/>
@@ -21,6 +23,8 @@ const Navpage = () => {
         <Route path="/project" element={<Project/>}/>
         <Route path="/project_detail/:id"element={<Project_detail />} />
         <Route path="/EditEmployee"element={<EditEmployee/>} />
+        <Route path="/Loginpage"element={<Loginpage/>} />
+        <Route path="/Signup_page"element={<Signup_page/>} />
 
       </Routes>
     </div>
