@@ -8,10 +8,11 @@ import {
   Box,
   Link,
 } from "@mui/material";
+
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const SignupPage = () => {
-  const [showPassword, setPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handlePasswordVisibilityToggle = () => {
     setShowPassword(!showPassword);

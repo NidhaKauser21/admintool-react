@@ -15,7 +15,7 @@ export default function BasicEmployeeDetails() {
   const [department, setDepartment] = useState("");
 
   const handleChange = (event) => {
-    setDepartmen(event.target.value);
+    setdepartmen(event.target.value);
   };
 
   return (
