@@ -116,7 +116,7 @@ const TableComponent = (props) => {
                 >
                   <MoreIcon />
                 </IconButton>
-                <Menu
+                <Menu elevation={1}
                   id="simple-menu"
                   anchorEl={anchorEl}
                   open={Boolean(anchorEl)}

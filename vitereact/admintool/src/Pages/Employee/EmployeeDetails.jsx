@@ -13,8 +13,15 @@ import Emergency from "../../Data/Employee/Contact.json";
 import Educational from "../../Data/Employee/Personal.json"
 import {Table,TableHead,TableRow,TableCell,TableBody,} from "@mui/material";
 import "../../Style/EmployeeDetails.css";
+import { useNavigate } from "react-router-dom";
 
 export default function EmployeeDetails() {
+
+  const navigate = useNavigate(); 
+
+  const handleEdit1Click = () => {
+    navigate('/EmployeeForm'); 
+  };
 
   const { id } = useParams();
   console.log(id);
@@ -118,7 +125,7 @@ export default function EmployeeDetails() {
             <CardContent
               sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
             >
-              <EditIcon
+              <EditIcon onClick={handleEdit1Click}
                 sx={{
                   display: "flex",
                   justifyContent: "flex-end",

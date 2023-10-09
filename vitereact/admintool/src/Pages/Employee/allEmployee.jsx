@@ -11,16 +11,25 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import allEmployee from "../../Data/Employee/allEmployee.json";
 import Searchbar from "../../Components/Searchbar";
+import { useNavigate } from 'react-router-dom';
+import  "../../Style/allEmployee.css";
 
 export default function EmployeeCard() {
-  const [anchorEl, setAnchorEl] = useState(null);
+
+  const navigate = useNavigate(); 
+
+  const handleEditClick = () => {
+    navigate('/EditEmployee'); 
+  };
+
+  const [menu, setMenu] = useState(null);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setMenu(event.currentTarget);
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
+    setMenu(null);
   };
 
   return (
@@ -89,7 +98,7 @@ export default function EmployeeCard() {
                 aria-label="more"
                 id="menu-button"
                 aria-controls="card-menu"
-                aria-expanded={anchorEl ? "true" : undefined}
+                aria-expanded={menu ? "true" : undefined}
                 aria-haspopup="true"
                 onClick={handleClick}
                 sx={{
@@ -101,17 +110,14 @@ export default function EmployeeCard() {
                 <MoreVertIcon />
               </IconButton>
 
-              <Menu
-                id="card-menu"
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
+              <Menu elevation={1}
+                // id="card-menu"
+                anchorEl={menu}
+                open={Boolean(menu)}
                 onClose={handleClose}
-                className="menu"
-                style={{
-                  boxShadow: "none",
-                }}
+                
               >
-                <MenuItem onClick={handleClose}>Edit</MenuItem>
+                <MenuItem onClick={handleEditClick} >Edit</MenuItem>
                 <MenuItem onClick={handleClose}>Delete</MenuItem>
               </Menu>
 

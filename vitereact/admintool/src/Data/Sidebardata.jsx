@@ -16,6 +16,11 @@ export const  Sidebardata = [
     link:"/Employee"
   },
   {
+    title:"My Profile",
+    icon:<PeopleOutlinedIcon />,
+    link:"/"
+  },
+  {
     title:"project",
     icon:<DescriptionOutlinedIcon />,
     link:"/project"

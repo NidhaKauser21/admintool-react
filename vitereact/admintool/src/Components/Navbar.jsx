@@ -22,7 +22,7 @@ import Button from "@mui/material/Button";
 import "../Style/Navbar.css";
 import Sidebar from "./Sidebar";
 import Navadhiti_logo from '../assets/Navadhiti_logo.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -97,6 +97,13 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+
+  const handleLoginClick = () => {
+    navigate('/Loginpage'); // Use navigate to navigate to the desired route
+  };
+
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -125,14 +132,15 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
-      <MenuItem>
+      <MenuItem onClick={handleLoginClick}>
         <IconButton
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
+          
         >
-          <LogoutOutlinedIcon />
+          <LogoutOutlinedIcon  />
         </IconButton>
         <p>Log_out</p>
       </MenuItem>
@@ -187,7 +195,7 @@ export default function PrimarySearchAppBar() {
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit" 
-          component={Link} to={`/loginForm/`}
+          onClick={handleLoginClick}
         >
           <LogoutOutlinedIcon />
         </IconButton>
