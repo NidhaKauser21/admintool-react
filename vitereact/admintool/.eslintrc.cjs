@@ -10,7 +10,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['./src/Components/Table.jsx'],
+      files: ['./src/Components/Table/Table.jsx'],
       rules: {
         'react/prop-types': 'off',
       },

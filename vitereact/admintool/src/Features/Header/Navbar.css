@@ -1,0 +1,15 @@
+
+
+  .Navadhiti_logo{
+    margin-left: 130px;
+    max-height: 65px;
+  }
+
+@media (max-width: 768px) {
+  .Navadhiti_logo{
+    margin-left: 0;
+  }
+}
+
+
+  
