@@ -8,13 +8,14 @@ export const  Sidebardata = [
   {
     title:"Dashboard",
     icon:< DashboardOutlinedIcon/>,
-    link:"/Dashboard"
+    link:"/dashboard"
   },
   {
     title:"Employee",
     icon:<PeopleOutlinedIcon />,
-    link:"/Employee"
-  },
+    link:"/employee"
+  }
+  ,
   {
     title:"project",
     icon:<DescriptionOutlinedIcon />,
@@ -23,11 +24,11 @@ export const  Sidebardata = [
   {
     title:"Accounting",
     icon:<AccountBalanceOutlinedIcon />,
-    link:"/Accounting"
+    link:"/accounting"
   },
   {
     title:"Assets",
     icon:<CollectionsOutlinedIcon />,
-    link:"/Assets"
+    link:"/assets"
   }
 ]

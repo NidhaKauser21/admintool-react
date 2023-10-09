@@ -1,17 +1,19 @@
 import { Button, Typography } from "@mui/material";
-import Searchbar from "../Components/Searchbar";
-import TableComponent from "../Components/Table";
-import data from "../Data/Mock_data.json";
+import TableComponent from "../../Components/Table/Table";
+import Asserts_data from "../../Data/Assets.json";
+import Searchbar from "../../Components/Searchbar/Searchbar";
+import React from "react";
 
-const DataTable = () => {
+const Asserts = () => {
   const tableHeaders = [
-    "Avather",
-    "name",
-    "role",
-    "project name",
-    "start_date",
-    "last_date",
-    "status",
+    "Asset_user",
+    "Asset_Name",
+    "Asset_Id",
+    "Purchase_date",
+    "Warrenty",
+    "warrenty_end",
+    "Amount",
+    "Status1",
   ];
 
   return (
@@ -19,13 +21,13 @@ const DataTable = () => {
       <div style={{ display: "flex", alignItems: "center" }}>
         <div>
           <Typography variant="h4" style={{ fontWeight: "600" }}>
-            Dashboard
+            All Assets
           </Typography>
           <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Typography variant="h6">
-              Employee Detail
+            <Typography variant="h5" style={{ fontWeight: "600" }}>
+              Dashboard
             </Typography>
-            {/* <Typography variant="h5">/ Assets</Typography> */}
+            <Typography variant="h5">/ Assets</Typography>
           </div>
         </div>
 
@@ -45,13 +47,13 @@ const DataTable = () => {
             },
           }}
         >
-          + NEW EMPLOYEE
+          + NEW ASSETS
         </Button>
       </div>
       <Searchbar />
-      <TableComponent tableData={data} tableHeaders={tableHeaders} />
+      <TableComponent tableData={Asserts_data} tableHeaders={tableHeaders} />
     </div>
   );
 };
 
-export default DataTable;
+export default Asserts;

@@ -1,6 +1,6 @@
 import React from 'react';
-import'../Style/Footer.css'
-import Navadhiti_logo from '../assets/Navadhiti_logo.png'
+import "../Footer/Footer.css"
+import Navadhiti_logo from "../../assets/Navadhiti_logo.png"
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';

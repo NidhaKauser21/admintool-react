@@ -10,15 +10,15 @@ import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import allEmployee from "../../Data/Employee/allEmployee.json";
-import Searchbar from "../../Components/Searchbar";
-import { useNavigate } from 'react-router-dom';
+import Searchbar from "../../Components/Searchbar/Searchbar";
+import { useNavigate } from "react-router-dom";
+import "../Employee_card/EmployeeCard.css"
 
 export default function EmployeeCard() {
-
   const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
   const handleEditClick = () => {
-    navigate('/EditEmployee'); // Use navigate to navigate to the desired route
+    navigate("employeeCard_Edit"); // Use navigate to navigate to the desired route
   };
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -75,8 +75,7 @@ export default function EmployeeCard() {
           gap: "20px",
         }}
       >
-        {allEmployee.map((data) => (
-         
+        {allEmployee?.map((data) => (
           <Card
             key={data.id}
             sx={{
@@ -125,16 +124,14 @@ export default function EmployeeCard() {
 
               <Avatar
                 component={Link}
-                to={`/EmployeeDetails/${data.id}`}
+                to={`employeeDetails/${data.id}`}
                 src={data.avatarurl}
                 sx={{ width: 100, height: 100 }}
               />
 
-
               <Typography variant="h5" sx={{ mt: 2 }}>
                 {data.name}
               </Typography>
-
 
               <Typography
                 variant="body1"
@@ -147,6 +144,5 @@ export default function EmployeeCard() {
         ))}
       </div>
     </div>
-             
   );
 }

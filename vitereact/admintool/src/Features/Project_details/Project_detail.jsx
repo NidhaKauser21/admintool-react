@@ -1,8 +1,7 @@
-import "../../Style/project.css";
-import TableComponent from "../../Components/Table";
+import "../Project_card/Project.css";
+import TableComponent from "../../Components/Table/Table";
 import data from "../../Data/projectCard.json";
-// import dashboard_data from '../../Data/Mock_data.json'
-import renderPieChart from "./Chart";
+import renderPieChart from "../Project_details/Chart";
 import { useParams } from "react-router-dom";
 import {
   Button,
@@ -18,7 +17,7 @@ import {
 
 function ProjectPage() {
   const { id } = useParams();
-  // console.log(id);
+  console.log(id);
   // console.log(data);
   // let data1=null
   let productDetail = data?.filter((value, index) => {
@@ -40,6 +39,7 @@ function ProjectPage() {
   ];
   return (
     <div className="project-page">
+
       <div style={{ display: "flex", alignItems: "center" }}>
         <div>
           <Typography variant="h4" style={{ fontWeight: "600" }}>
@@ -70,6 +70,7 @@ function ProjectPage() {
           + EDIT DETAIL
         </Button>
       </div>
+
       <div style={{ marginTop: "50px" }}>
         {productDetail?.map((project, index) => (
           <div key={index}>

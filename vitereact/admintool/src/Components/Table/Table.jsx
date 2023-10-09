@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Style/Table.css";
+import "../Table/Table.css";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";

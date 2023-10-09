@@ -10,15 +10,20 @@ import { useParams } from "react-router-dom";
 import allEmployee from "../../Data/Employee/allEmployee.json";
 import Bankinformation from "../../Data/Employee/Bank_information.json";
 import Emergency from "../../Data/Employee/Contact.json";
-import Educational from "../../Data/Employee/Personal.json"
-import {Table,TableHead,TableRow,TableCell,TableBody,} from "@mui/material";
-import "../../Style/EmployeeDetails.css";
+import Educational from "../../Data/Employee/Personal.json";
+import {
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "@mui/material";
+import "../Employee_details/EmployeeDetails.css";
 
 export default function EmployeeDetails() {
-
   const { id } = useParams();
   console.log(id);
-
+  console.log(allEmployee);
   let Emp_Detail = allEmployee?.filter((value, index) => {
     return id == value.id;
   });
@@ -35,9 +40,9 @@ export default function EmployeeDetails() {
     return id == value.id;
   });
 
-  // console.log(Bankinfo);
-  // console.log(Emp_Detail);
-  // console.log(Contactinfo);
+  console.log(Bankinfo);
+  console.log(Emp_Detail);
+  console.log(Contactinfo);
   console.log(Educationalinfo);
 
   let employee = Emp_Detail[0];
@@ -47,16 +52,15 @@ export default function EmployeeDetails() {
 
   return (
     <div>
-
-        <div>
-          <Typography variant="h4" style={{ fontWeight: "600" }}>
-            Profile
-          </Typography>
-          <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Typography variant="h5">Dashboard /</Typography>
-            <Typography variant="h6"> profile</Typography>
-          </div>
+      <div>
+        <Typography variant="h4" style={{ fontWeight: "600" }}>
+          Profile
+        </Typography>
+        <div style={{ display: "flex", paddingTop: "10px" }}>
+          <Typography variant="h5">Dashboard /</Typography>
+          <Typography variant="h6"> profile</Typography>
         </div>
+      </div>
 
       <div>
         {/* .......Profile Card...... */}
@@ -85,7 +89,7 @@ export default function EmployeeDetails() {
             <Box sx={{ display: "felx", alignItems: "center", p: 3 }}>
               <Avatar
                 alt="User Avatar"
-                src={employee.avatarurl}
+                src={employee?.avatarurl}
                 sx={{ width: 130, height: 130, marginTop: "7px" }}
               />
             </Box>
@@ -130,32 +134,38 @@ export default function EmployeeDetails() {
 
               <div>
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Phone:</span> {employee.phone}
+                  <span style={{ minWidth: "150px" }}>Phone:</span>{" "}
+                  {employee.phone}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Email:</span>{employee.Email}
+                  <span style={{ minWidth: "150px" }}>Email:</span>
+                  {employee.Email}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Secondary Email:</span>{employee.sec_email}
+                  <span style={{ minWidth: "150px" }}>Secondary Email:</span>
+                  {employee.sec_email}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Birthday:</span>{employee.Dob}
+                  <span style={{ minWidth: "150px" }}>Birthday:</span>
+                  {employee.Dob}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Address:</span> {employee.Address}
+                  <span style={{ minWidth: "150px" }}>Address:</span>{" "}
+                  {employee.Address}
                 </Typography>
                 <br />
 
                 <Typography sx={{ fontWeight: "bold", display: "flex" }}>
-                  <span style={{ minWidth: "150px" }}>Gender :</span> {employee.Gender}
+                  <span style={{ minWidth: "150px" }}>Gender :</span>{" "}
+                  {employee.Gender}
                 </Typography>
               </div>
             </CardContent>
@@ -206,22 +216,24 @@ export default function EmployeeDetails() {
                 <Typography
                   sx={{ marginTop: "20px", display: "flex", padding: "15px" }}
                 >
-                  <span style={{ minWidth: "150px" }}>Bank Name:</span> {bank.bank_name}
+                  <span style={{ minWidth: "150px" }}>Bank Name:</span>{" "}
+                  {bank.bank_name}
                 </Typography>
 
                 <Typography sx={{ display: "flex", padding: "15px" }}>
                   <span style={{ minWidth: "150px" }}>Bank Account No:</span>{" "}
-                 {bank.acc_no}
+                  {bank.acc_no}
                 </Typography>
 
                 <Typography sx={{ display: "flex", padding: "15px" }}>
-                  <span style={{ minWidth: "150px" }}>IFSC Code:</span> {bank["IFSC code"]}
+                  <span style={{ minWidth: "150px" }}>IFSC Code:</span>{" "}
+                  {bank["IFSC code"]}
                 </Typography>
 
                 <Typography sx={{ display: "flex", padding: "15px" }}>
-                  <span style={{ minWidth: "150px" }}>PAN No:</span> {bank["PAN no"]}
+                  <span style={{ minWidth: "150px" }}>PAN No:</span>{" "}
+                  {bank["PAN no"]}
                 </Typography>
-
               </div>
             </div>
           </CardContent>
@@ -512,7 +524,7 @@ export default function EmployeeDetails() {
         </Card>
 
         {/* ....... Family Information............ */}
-
+        
         <Card
           elevation={9}
           sx={{

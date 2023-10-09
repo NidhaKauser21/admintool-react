@@ -5,7 +5,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
@@ -18,10 +18,10 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Drawer from "@mui/material/Drawer";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-import Button from "@mui/material/Button";
-import "../Style/Navbar.css";
-import Sidebar from "./Sidebar";
-import Navadhiti_logo from '../assets/Navadhiti_logo.png'
+// import Button from "@mui/material/Button";
+import "../Header/Navbar.css";
+import Sidebar from "../Sidebar/Sidebar";
+import Navadhiti_logo from "../../assets/Navadhiti_logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
@@ -97,11 +97,10 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-
   const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
   const handleLoginClick = () => {
-    navigate('/Loginpage'); // Use navigate to navigate to the desired route
+    navigate("/login"); // Use navigate to navigate to the desired route
   };
 
   const menuId = "primary-search-account-menu";
@@ -138,9 +137,8 @@ export default function PrimarySearchAppBar() {
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
-          
         >
-          <LogoutOutlinedIcon  />
+          <LogoutOutlinedIcon />
         </IconButton>
         <p>Log_out</p>
       </MenuItem>
@@ -194,7 +192,7 @@ export default function PrimarySearchAppBar() {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="inherit" 
+          color="inherit"
           onClick={handleLoginClick}
         >
           <LogoutOutlinedIcon />
@@ -309,7 +307,7 @@ export default function PrimarySearchAppBar() {
             <IconButton
               variant="contained"
               onClick={toggleDrawer}
-              style={{ height: "65px", marginRight: "auto", color: "#646368" }}
+              style={{ height: "85px", marginRight: "auto", color: "#646368" }}
               size="large"
             >
               <MenuIcon />
