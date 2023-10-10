@@ -9,12 +9,11 @@ import {
   IconButton,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import Navadhiti_logo from "../../assets/Navadhiti_logo.png";
 import { useForm, Controller } from "react-hook-form";
 
 const SignupPage = () => {
-
   const [showPassword, setShowPassword] = useState(false);
   const [showconfirmPassword, setShowconfirmPassword] = useState(false);
 
@@ -28,20 +27,21 @@ const SignupPage = () => {
     );
   };
 
-  const { control, formState, handleSubmit,  setError, clearErrors, } = useForm();
+  const navigate = useNavigate();
+
+  const { control, formState, handleSubmit, setError, clearErrors } = useForm();
   const { isDirty, isSubmitting } = formState;
 
   const isPasswordValid = (value) => {
     const hasValidLength = value.length >= 8;
     const hasSpecialChar = /[!@#$%^&*]/.test(value);
-    const hasUppercase = /[A-Z]/.test(value);
     const hasLowercase = /[a-z]/.test(value);
     const hasNumber = /\d/.test(value);
 
     if (!hasValidLength) {
       return "Password must be at least 8 characters";
     }
-    if (!(hasSpecialChar && hasUppercase && hasLowercase && hasNumber)) {
+    if (!(hasSpecialChar  && hasLowercase && hasNumber)) {
       return "Password must contain at least one special char, one uppercase letter, one lowercase letter, and one number";
     }
     return true;
@@ -53,12 +53,15 @@ const SignupPage = () => {
         type: "manual",
         message: "Passwords do not match",
       });
-    } 
-    else {
+    } else {
       clearErrors("ConfirmPassword");
 
+      // Create a copy of the data without ConfirmPassword
+      const postData = { ...data };
+      delete postData.ConfirmPassword;
+
       const url = `https://admintool-bf845-default-rtdb.firebaseio.com/signup.json`;
-      console.log(data);
+      console.log(postData);
 
       try {
         const response = await fetch(url, {
@@ -66,11 +69,13 @@ const SignupPage = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(postData),
         });
 
         if (response.ok) {
           console.log("Data saved to Firebase");
+          navigate("/Login");
+
         } else {
           console.log("Failed to save data to Firebase", response);
         }

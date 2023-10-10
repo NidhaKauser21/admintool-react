@@ -45,7 +45,7 @@ const LoginPage = () => {
     console.log(data);
     const emailToFind = data.Email;
     const passwordToFind = data.Password;
-    const url ="https://admintool-bf845-default-rtdb.firebaseio.com/signup.json";
+    const url = "https://admintool-bf845-default-rtdb.firebaseio.com/signup.json";
     // const searchURL = `https://admintool-bf845-default-rtdb.firebaseio.com/signup.json?orderBy="Email"&equalTo="${emailToFind}"`;
     // console.log(searchURL);
     // // Make a GET request to the Firebase REST API
@@ -75,30 +75,36 @@ const LoginPage = () => {
     //   .catch((error) => {
     //     console.error("Error searching for user:", error);
     //   });
-    fetch(url, {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Data retrieved successfully:", data);
-        let isValidUser = false;
+   // Make a GET request to retrieve user data
+  fetch(url, {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((userData) => {
+      console.log("Data retrieved successfully:", userData);
+      let isValidUser = false;
 
-        for (const userId in data) {
-          const user = data[userId];
+      if (userData) {
+        for (const userId in userData) {
+          const user = userData[userId];
           if (user.Email === emailToFind && user.Password === passwordToFind) {
             isValidUser = true;
-            console.log("login successful.user details:", user);
+            console.log("Login successful. User details:", user);
+            // Redirect to the dashboard (you need to define the `navigate` function)
             navigate("/dashboard");
+            return; // Stop the loop once a valid user is found
           }
         }
-        if (!isValidUser) {
-          console.log("Invalid username & password.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error retrieving data:", error);
-      });
-  };
+      }
+
+      if (!isValidUser) {
+        console.log("Invalid username & password.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error retrieving data:", error);
+    });
+};
 
   return (
     <div
