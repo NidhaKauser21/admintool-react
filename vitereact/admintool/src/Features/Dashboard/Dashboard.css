@@ -1,0 +1,10 @@
+.Dashboard_table th{
+ font-weight: bold;
+ font-size: 18px;
+ font-family: 'Arial, sans-serif'; 
+}
+
+.Dashboard_table td{
+    font-size: 18px;
+    font-family: 'Arial, sans-serif'; 
+}

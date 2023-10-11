@@ -1,0 +1,33 @@
+.searchbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+.search-button{
+  width:25ch;
+}  
+
+.dropdown{
+  width: 25ch;
+}
+.header-button{
+padding-right:25px;
+}
+  
+  @media (max-width: 600px) {
+    .searchbar {
+      display: block; 
+      width:100%;
+    }
+    .search-button{
+      width:100%;
+    }
+    .dropdown{
+      width: 100%;
+    }
+    .header-button{
+      padding-right: 0;
+    }
+  }
